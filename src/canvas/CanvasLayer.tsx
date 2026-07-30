@@ -5,7 +5,7 @@ import { Toolbar } from './Toolbar';
 import { MemoItem } from './MemoItem';
 import { closedSmoothPath, pouchHull, rectsIntersect } from './geometry';
 import type { Rect } from './geometry';
-import { buildCanvasMarkdown, downloadTextFile, exportCanvasPng } from './export';
+import { exportCanvasPng } from './export';
 import type { ContentBounds } from './export';
 import styles from './canvas.module.css';
 
@@ -341,11 +341,6 @@ export const CanvasLayer = forwardRef<HTMLDivElement>(function CanvasLayer(_prop
     return new Date().toISOString().slice(0, 10);
   }
 
-  function handleExportMarkdown() {
-    const markdown = buildCanvasMarkdown({ nodes, threads, pouches, memos, fragments });
-    downloadTextFile(`fishing-pond-${dateStamp()}.md`, markdown);
-  }
-
   async function handleExportPng() {
     const bounds = computeContentBounds();
     if (!bounds || !paneRef.current) return;
@@ -392,9 +387,6 @@ export const CanvasLayer = forwardRef<HTMLDivElement>(function CanvasLayer(_prop
         data-export-hide
         onPointerDown={(event) => event.stopPropagation()}
       >
-        <button type="button" disabled={isCanvasEmpty} onClick={handleExportMarkdown}>
-          마크다운으로 내보내기
-        </button>
         <button type="button" disabled={isCanvasEmpty} onClick={handleExportPng}>
           PNG로 내보내기
         </button>
