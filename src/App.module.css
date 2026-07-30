@@ -1,0 +1,38 @@
+.layout {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.canvasPane {
+  width: 50%;
+  height: 100%;
+  background: #f4efe4;
+  border-right: 1px solid #d8d0bd;
+}
+
+.surfacePane {
+  width: 50%;
+  height: 100%;
+  background: #eaf2f4;
+}
+
+.placeholderLabel {
+  padding: 24px;
+  color: #8a8272;
+  font-family: system-ui, sans-serif;
+  font-size: 14px;
+}
+
+.desktopOnly {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: system-ui, sans-serif;
+  color: #555;
+  text-align: center;
+  padding: 24px;
+}

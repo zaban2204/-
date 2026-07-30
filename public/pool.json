@@ -1,0 +1,894 @@
+[
+  {
+    "id": "s01",
+    "kind": "sentence",
+    "text": "그날 이후로 그는 우산을 펼 때마다 손끝이 떨렸다.",
+    "origin": "base",
+    "neighborIds": [
+      "p04",
+      "s35",
+      "s15",
+      "s40",
+      "s25",
+      "s27",
+      "s14",
+      "s32"
+    ]
+  },
+  {
+    "id": "s02",
+    "kind": "sentence",
+    "text": "편지는 부치지 못한 채 서랍 안에서 십 년을 묵었다.",
+    "origin": "base",
+    "neighborIds": [
+      "s11",
+      "s15",
+      "s21",
+      "s12",
+      "s16",
+      "s08",
+      "s34",
+      "s04"
+    ]
+  },
+  {
+    "id": "s03",
+    "kind": "sentence",
+    "text": "막차를 놓친 사람들은 서로의 얼굴을 오래 쳐다보지 않았다.",
+    "origin": "base",
+    "neighborIds": [
+      "s34",
+      "s15",
+      "s38",
+      "s35",
+      "s29",
+      "p04",
+      "s30",
+      "s14"
+    ]
+  },
+  {
+    "id": "s04",
+    "kind": "sentence",
+    "text": "할머니는 죽은 이의 이름을 부를 때만 사투리를 썼다.",
+    "origin": "base",
+    "neighborIds": [
+      "s39",
+      "s11",
+      "s08",
+      "s29",
+      "s33",
+      "s26",
+      "s22",
+      "s35"
+    ]
+  },
+  {
+    "id": "s05",
+    "kind": "sentence",
+    "text": "냉장고 문을 열 때마다 그 집 냄새가 훅 끼쳤다.",
+    "origin": "base",
+    "neighborIds": [
+      "s30",
+      "s26",
+      "s40",
+      "s22",
+      "s24",
+      "s01",
+      "s37",
+      "p04"
+    ]
+  },
+  {
+    "id": "s06",
+    "kind": "sentence",
+    "text": "아이는 그림자를 밟지 않으려 온종일 까치발로 걸었다.",
+    "origin": "base",
+    "neighborIds": [
+      "s33",
+      "s34",
+      "p03",
+      "s30",
+      "s35",
+      "s40",
+      "p04",
+      "s17"
+    ]
+  },
+  {
+    "id": "s07",
+    "kind": "sentence",
+    "text": "바다는 항구에서 보는 것과 배 위에서 보는 것이 전혀 다른 짐승이었다.",
+    "origin": "base",
+    "neighborIds": [
+      "p02",
+      "p08",
+      "p12",
+      "p09",
+      "s03",
+      "s34",
+      "p11",
+      "p06"
+    ]
+  },
+  {
+    "id": "s08",
+    "kind": "sentence",
+    "text": "그녀는 이혼 서류에 서명하며 자신의 필체가 낯설다고 생각했다.",
+    "origin": "base",
+    "neighborIds": [
+      "s04",
+      "s21",
+      "s11",
+      "s35",
+      "s39",
+      "s06",
+      "s02",
+      "s15"
+    ]
+  },
+  {
+    "id": "s09",
+    "kind": "sentence",
+    "text": "정전이 된 밤, 온 가족이 촛불 하나를 가운데 두고 둘러앉았다.",
+    "origin": "base",
+    "neighborIds": [
+      "p01",
+      "p07",
+      "s22",
+      "s36",
+      "s24",
+      "s33",
+      "s03",
+      "p11"
+    ]
+  },
+  {
+    "id": "s10",
+    "kind": "sentence",
+    "text": "그는 매일 같은 벤치에 앉아 다른 사람인 척 신문을 읽었다.",
+    "origin": "base",
+    "neighborIds": [
+      "s19",
+      "s13",
+      "s35",
+      "s21",
+      "s11",
+      "s18",
+      "s27",
+      "s01"
+    ]
+  },
+  {
+    "id": "s11",
+    "kind": "sentence",
+    "text": "마지막 문장을 쓰지 못한 소설이 세 편째였다.",
+    "origin": "base",
+    "neighborIds": [
+      "s21",
+      "s04",
+      "s02",
+      "s15",
+      "s25",
+      "s16",
+      "s08",
+      "s37"
+    ]
+  },
+  {
+    "id": "s12",
+    "kind": "sentence",
+    "text": "폐업한 가게의 간판은 오 년째 그대로 걸려 있었다.",
+    "origin": "base",
+    "neighborIds": [
+      "s32",
+      "s37",
+      "s15",
+      "s25",
+      "s02",
+      "s30",
+      "s27",
+      "s38"
+    ]
+  },
+  {
+    "id": "s13",
+    "kind": "sentence",
+    "text": "강아지는 주인이 죽은 자리를 매일 같은 시간에 찾아갔다.",
+    "origin": "base",
+    "neighborIds": [
+      "s10",
+      "s31",
+      "s26",
+      "s04",
+      "s32",
+      "s19",
+      "s38",
+      "s39"
+    ]
+  },
+  {
+    "id": "s14",
+    "kind": "sentence",
+    "text": "그는 거짓말을 할 때만 상대의 눈을 똑바로 보았다.",
+    "origin": "base",
+    "neighborIds": [
+      "s35",
+      "s03",
+      "p03",
+      "s33",
+      "s06",
+      "s01",
+      "s34",
+      "s10"
+    ]
+  },
+  {
+    "id": "s15",
+    "kind": "sentence",
+    "text": "첫눈이 내리던 날, 우체통에 답장 없는 편지가 쌓여갔다.",
+    "origin": "base",
+    "neighborIds": [
+      "s35",
+      "p04",
+      "s37",
+      "s03",
+      "s11",
+      "s02",
+      "s40",
+      "s01"
+    ]
+  },
+  {
+    "id": "s16",
+    "kind": "sentence",
+    "text": "낡은 피아노는 건반 두 개가 소리를 내지 않았지만 아무도 고치지 않았다.",
+    "origin": "base",
+    "neighborIds": [
+      "s21",
+      "s11",
+      "s37",
+      "s29",
+      "s04",
+      "s02",
+      "s12",
+      "s22"
+    ]
+  },
+  {
+    "id": "s17",
+    "kind": "sentence",
+    "text": "그녀는 이사할 때마다 화분 하나만은 절대 버리지 않았다.",
+    "origin": "base",
+    "neighborIds": [
+      "s06",
+      "s22",
+      "s25",
+      "s13",
+      "s31",
+      "s33",
+      "s04",
+      "s16"
+    ]
+  },
+  {
+    "id": "s18",
+    "kind": "sentence",
+    "text": "지하철 막차 안에서 낯선 사람이 그의 어깨에 기대 잠들었다.",
+    "origin": "base",
+    "neighborIds": [
+      "s30",
+      "s27",
+      "s35",
+      "p01",
+      "p03",
+      "s03",
+      "p04",
+      "s06"
+    ]
+  },
+  {
+    "id": "s19",
+    "kind": "sentence",
+    "text": "아버지는 퇴직 후 매일 정장을 입고 공원 벤치로 출근했다.",
+    "origin": "base",
+    "neighborIds": [
+      "s10",
+      "s27",
+      "s13",
+      "s01",
+      "s29",
+      "s18",
+      "s38",
+      "s39"
+    ]
+  },
+  {
+    "id": "s20",
+    "kind": "sentence",
+    "text": "그 섬에서는 태풍이 지나간 다음 날에만 시장이 열렸다.",
+    "origin": "base",
+    "neighborIds": [
+      "s40",
+      "s25",
+      "s01",
+      "s15",
+      "p02",
+      "p12",
+      "p01",
+      "s05"
+    ]
+  },
+  {
+    "id": "s21",
+    "kind": "sentence",
+    "text": "그는 유서를 세 번 고쳐 쓰고 결국 아무에게도 보내지 않았다.",
+    "origin": "base",
+    "neighborIds": [
+      "s11",
+      "s16",
+      "s02",
+      "s35",
+      "s23",
+      "s08",
+      "s10",
+      "s29"
+    ]
+  },
+  {
+    "id": "s22",
+    "kind": "sentence",
+    "text": "오래된 카세트테이프에서 지지직거리는 소리 사이로 어머니의 웃음이 섞여 있었다.",
+    "origin": "base",
+    "neighborIds": [
+      "s29",
+      "p03",
+      "s09",
+      "s03",
+      "s04",
+      "p04",
+      "s05",
+      "s33"
+    ]
+  },
+  {
+    "id": "s23",
+    "kind": "sentence",
+    "text": "소년은 전학 첫날 자신의 이름을 세 번이나 다르게 말했다.",
+    "origin": "base",
+    "neighborIds": [
+      "s39",
+      "s35",
+      "s21",
+      "s33",
+      "s29",
+      "s11",
+      "s04",
+      "p03"
+    ]
+  },
+  {
+    "id": "s24",
+    "kind": "sentence",
+    "text": "폭우가 쏟아지던 밤, 두 사람은 처마 밑에서 말없이 담배를 나눠 피웠다.",
+    "origin": "base",
+    "neighborIds": [
+      "s09",
+      "s31",
+      "s05",
+      "s40",
+      "p01",
+      "s36",
+      "s15",
+      "s01"
+    ]
+  },
+  {
+    "id": "s25",
+    "kind": "sentence",
+    "text": "그녀의 마지막 일기는 날씨 이야기로 끝나 있었다.",
+    "origin": "base",
+    "neighborIds": [
+      "s11",
+      "s32",
+      "s20",
+      "s01",
+      "s04",
+      "s12",
+      "s40",
+      "s31"
+    ]
+  },
+  {
+    "id": "s26",
+    "kind": "sentence",
+    "text": "폐가가 된 옛집 마당에는 여전히 봉숭아가 피었다.",
+    "origin": "base",
+    "neighborIds": [
+      "s40",
+      "s34",
+      "s30",
+      "s28",
+      "s05",
+      "p11",
+      "p01",
+      "s04"
+    ]
+  },
+  {
+    "id": "s27",
+    "kind": "sentence",
+    "text": "그는 이름 모를 역에서 내려 두 시간을 걸었다.",
+    "origin": "base",
+    "neighborIds": [
+      "s18",
+      "s31",
+      "s32",
+      "s19",
+      "s30",
+      "s01",
+      "s38",
+      "s06"
+    ]
+  },
+  {
+    "id": "s28",
+    "kind": "sentence",
+    "text": "형제는 유산 문제로 등을 돌린 뒤에도 같은 산소에 성묘를 갔다.",
+    "origin": "base",
+    "neighborIds": [
+      "s26",
+      "p04",
+      "s03",
+      "s30",
+      "s39",
+      "p11",
+      "s29",
+      "s33"
+    ]
+  },
+  {
+    "id": "s29",
+    "kind": "sentence",
+    "text": "낡은 사진 속 자신이 웃고 있는 이유를 그는 끝내 기억해내지 못했다.",
+    "origin": "base",
+    "neighborIds": [
+      "s22",
+      "s03",
+      "s35",
+      "s39",
+      "s04",
+      "s23",
+      "p04",
+      "s33"
+    ]
+  },
+  {
+    "id": "s30",
+    "kind": "sentence",
+    "text": "여관방 벽지에는 전 투숙객이 남긴 낙서가 빼곡했다.",
+    "origin": "base",
+    "neighborIds": [
+      "s34",
+      "s18",
+      "s40",
+      "s26",
+      "s37",
+      "p04",
+      "s05",
+      "s03"
+    ]
+  },
+  {
+    "id": "s31",
+    "kind": "sentence",
+    "text": "그녀는 매일 아침 죽은 남편의 몫까지 두 잔의 커피를 내렸다.",
+    "origin": "base",
+    "neighborIds": [
+      "s36",
+      "s13",
+      "s27",
+      "s35",
+      "s24",
+      "s25",
+      "s04",
+      "s15"
+    ]
+  },
+  {
+    "id": "s32",
+    "kind": "sentence",
+    "text": "공장이 문을 닫던 날, 노동자들은 마지막으로 기계에 손을 얹어 보았다.",
+    "origin": "base",
+    "neighborIds": [
+      "s25",
+      "s12",
+      "s27",
+      "s03",
+      "s30",
+      "s13",
+      "s01",
+      "s15"
+    ]
+  },
+  {
+    "id": "s33",
+    "kind": "sentence",
+    "text": "태어난 지 한 달 된 조카는 낯선 손길에도 울지 않고 빤히 쳐다보았다.",
+    "origin": "base",
+    "neighborIds": [
+      "s06",
+      "p03",
+      "s39",
+      "p08",
+      "p04",
+      "s04",
+      "s14",
+      "s23"
+    ]
+  },
+  {
+    "id": "s34",
+    "kind": "sentence",
+    "text": "오래 떠나 있던 고향에 돌아오니 골목의 폭이 낯설게 좁아 보였다.",
+    "origin": "base",
+    "neighborIds": [
+      "s30",
+      "s40",
+      "s26",
+      "s06",
+      "s03",
+      "s38",
+      "p11",
+      "p12"
+    ]
+  },
+  {
+    "id": "s35",
+    "kind": "sentence",
+    "text": "그는 매번 같은 꿈에서 깨어나기 직전 문의 손잡이를 놓쳤다.",
+    "origin": "base",
+    "neighborIds": [
+      "s15",
+      "s23",
+      "p04",
+      "s03",
+      "s01",
+      "s29",
+      "s14",
+      "s21"
+    ]
+  },
+  {
+    "id": "s36",
+    "kind": "sentence",
+    "text": "별거 중인 부부는 여전히 같은 식탁에서 각자의 밥그릇을 놓고 먹었다.",
+    "origin": "base",
+    "neighborIds": [
+      "s31",
+      "s03",
+      "s09",
+      "s22",
+      "s24",
+      "s35",
+      "s14",
+      "s28"
+    ]
+  },
+  {
+    "id": "s37",
+    "kind": "sentence",
+    "text": "화재로 무너진 도서관에서 유일하게 남은 것은 대출카드 상자였다.",
+    "origin": "base",
+    "neighborIds": [
+      "s15",
+      "s30",
+      "s12",
+      "s34",
+      "s11",
+      "s16",
+      "s40",
+      "s05"
+    ]
+  },
+  {
+    "id": "s38",
+    "kind": "sentence",
+    "text": "시골 정류장의 시간표는 이미 없어진 버스 시간까지 그대로 적혀 있었다.",
+    "origin": "base",
+    "neighborIds": [
+      "s03",
+      "s34",
+      "s26",
+      "s40",
+      "s35",
+      "s27",
+      "s25",
+      "p01"
+    ]
+  },
+  {
+    "id": "s39",
+    "kind": "sentence",
+    "text": "노인은 손주의 이름 대신 죽은 아들의 이름을 자꾸 불렀다.",
+    "origin": "base",
+    "neighborIds": [
+      "s04",
+      "s23",
+      "s33",
+      "s29",
+      "s35",
+      "s11",
+      "s28",
+      "s08"
+    ]
+  },
+  {
+    "id": "s40",
+    "kind": "sentence",
+    "text": "폭설이 내린 다음 날 아침, 발자국 하나가 마당을 가로질러 사라져 있었다.",
+    "origin": "base",
+    "neighborIds": [
+      "s26",
+      "s34",
+      "s30",
+      "s20",
+      "s15",
+      "p12",
+      "p01",
+      "s01"
+    ]
+  },
+  {
+    "id": "p01",
+    "kind": "image",
+    "imageUrl": "/images/paintings/starry-night.jpg",
+    "caption": "소용돌이치는 밤하늘 아래 잠든 마을, 불안과 황홀이 뒤섞인 고요",
+    "origin": "base",
+    "neighborIds": [
+      "p07",
+      "p12",
+      "p10",
+      "p06",
+      "p11",
+      "p03",
+      "p05",
+      "p04"
+    ],
+    "title": "별이 빛나는 밤",
+    "artist": "빈센트 반 고흐",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg",
+    "license": "Public Domain"
+  },
+  {
+    "id": "p02",
+    "kind": "image",
+    "imageUrl": "/images/paintings/great-wave.jpg",
+    "caption": "거대한 파도 위 작은 배들, 자연 앞에 선 인간의 왜소함",
+    "origin": "base",
+    "neighborIds": [
+      "p12",
+      "s07",
+      "p09",
+      "p08",
+      "p10",
+      "p07",
+      "p06",
+      "p01"
+    ],
+    "title": "가나가와 해변의 거대한 파도",
+    "artist": "가쓰시카 호쿠사이",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tsunami_by_hokusai_19th_century.jpg",
+    "license": "Public Domain"
+  },
+  {
+    "id": "p03",
+    "kind": "image",
+    "imageUrl": "/images/paintings/girl-pearl-earring.jpg",
+    "caption": "어깨 너머로 돌아보는 소녀의 눈빛, 말하지 않은 사연을 품은 얼굴",
+    "origin": "base",
+    "neighborIds": [
+      "p01",
+      "p08",
+      "p10",
+      "p04",
+      "p12",
+      "p06",
+      "p07",
+      "p05"
+    ],
+    "title": "진주 귀걸이를 한 소녀",
+    "artist": "요하네스 페르메이르",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Meisje_met_de_parel.jpg",
+    "license": "Public Domain"
+  },
+  {
+    "id": "p04",
+    "kind": "image",
+    "imageUrl": "/images/paintings/the-scream.jpg",
+    "caption": "다리 위에서 두 손으로 얼굴을 감싼 채 터져 나오는 비명, 존재의 불안",
+    "origin": "base",
+    "neighborIds": [
+      "p01",
+      "p03",
+      "p10",
+      "p11",
+      "p07",
+      "p12",
+      "p08",
+      "s01"
+    ],
+    "title": "절규",
+    "artist": "에드바르 뭉크",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Edvard_Munch,_1893,_The_Scream,_oil,_tempera_and_pastel_on_cardboard,_91_x_73_cm,_National_Gallery_of_Norway.jpg",
+    "license": "Public Domain"
+  },
+  {
+    "id": "p05",
+    "kind": "image",
+    "imageUrl": "/images/paintings/wanderer-sea-of-fog.jpg",
+    "caption": "안개로 뒤덮인 산맥을 등지고 선 사내, 정복과 고독이 함께 있는 정상",
+    "origin": "base",
+    "neighborIds": [
+      "p06",
+      "p01",
+      "p12",
+      "p07",
+      "p10",
+      "p11",
+      "p09",
+      "p08"
+    ],
+    "title": "안개 바다 위의 방랑자",
+    "artist": "카스파르 다비트 프리드리히",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Caspar_David_Friedrich_-_Wanderer_above_the_sea_of_fog.jpg",
+    "license": "Public Domain"
+  },
+  {
+    "id": "p06",
+    "kind": "image",
+    "imageUrl": "/images/paintings/fighting-temeraire.jpg",
+    "caption": "낡은 군함이 예인선에 이끌려 해체장으로 향하는 노을 진 강, 영광의 끝",
+    "origin": "base",
+    "neighborIds": [
+      "p07",
+      "p01",
+      "p05",
+      "p10",
+      "p08",
+      "p12",
+      "p11",
+      "p03"
+    ],
+    "title": "전함 테메레르",
+    "artist": "조지프 말로드 윌리엄 터너",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_Fighting_Temeraire,_JMW_Turner,_National_Gallery.jpg",
+    "license": "Public Domain"
+  },
+  {
+    "id": "p07",
+    "kind": "image",
+    "imageUrl": "/images/paintings/night-watch.jpg",
+    "caption": "어둠 속에서 빛을 받으며 출동을 준비하는 민병대, 혼란과 위엄이 공존하는 순간",
+    "origin": "base",
+    "neighborIds": [
+      "p01",
+      "p06",
+      "p10",
+      "p12",
+      "p11",
+      "p05",
+      "p09",
+      "p04"
+    ],
+    "title": "야경",
+    "artist": "렘브란트 판 레인",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_Night_Watch_-_HD.jpg",
+    "license": "Public Domain"
+  },
+  {
+    "id": "p08",
+    "kind": "image",
+    "imageUrl": "/images/paintings/birth-of-venus.jpg",
+    "caption": "조개껍데기를 타고 해안에 닿는 여신, 갓 태어난 존재의 무방비함",
+    "origin": "base",
+    "neighborIds": [
+      "p12",
+      "p06",
+      "p02",
+      "p03",
+      "p01",
+      "p10",
+      "p04",
+      "p07"
+    ],
+    "title": "비너스의 탄생",
+    "artist": "산드로 보티첼리",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sandro_Botticelli_-_La_nascita_di_Venere_-_Google_Art_Project_-_edited.jpg",
+    "license": "Public Domain"
+  },
+  {
+    "id": "p09",
+    "kind": "image",
+    "imageUrl": "/images/paintings/water-lilies.jpg",
+    "caption": "연못 수면 위에 흩어진 빛과 그림자, 경계 없이 번지는 색",
+    "origin": "base",
+    "neighborIds": [
+      "p12",
+      "p02",
+      "p07",
+      "p01",
+      "p06",
+      "p11",
+      "p10",
+      "p08"
+    ],
+    "title": "수련",
+    "artist": "클로드 모네",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Claude_Monet_-_Water_Lilies_-_1906,_Ryerson.jpg",
+    "license": "Public Domain"
+  },
+  {
+    "id": "p10",
+    "kind": "image",
+    "imageUrl": "/images/paintings/the-kiss.jpg",
+    "caption": "금빛 무늬에 감싸여 서로를 안은 두 사람, 세상과 단절된 밀착",
+    "origin": "base",
+    "neighborIds": [
+      "p07",
+      "p01",
+      "p11",
+      "p06",
+      "p03",
+      "p12",
+      "p05",
+      "p04"
+    ],
+    "title": "키스",
+    "artist": "구스타프 클림트",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gustav_Klimt_016.jpg",
+    "license": "Public Domain"
+  },
+  {
+    "id": "p11",
+    "kind": "image",
+    "imageUrl": "/images/paintings/garden-earthly-delights.jpg",
+    "caption": "낙원과 지옥 사이 기이한 형상들이 뒤엉킨 풍경, 욕망과 심판",
+    "origin": "base",
+    "neighborIds": [
+      "p01",
+      "p10",
+      "p07",
+      "p05",
+      "p06",
+      "p04",
+      "p12",
+      "p09"
+    ],
+    "title": "세속적 쾌락의 동산",
+    "artist": "히에로니무스 보스",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_Garden_of_Earthly_Delights_by_Bosch_High_Resolution.jpg",
+    "license": "Public Domain"
+  },
+  {
+    "id": "p12",
+    "kind": "image",
+    "imageUrl": "/images/paintings/fog-warning.jpg",
+    "caption": "짙은 안개 속에서 홀로 노를 젓는 어부, 돌아갈 방향을 가늠하는 긴장",
+    "origin": "base",
+    "neighborIds": [
+      "p01",
+      "p09",
+      "p08",
+      "p02",
+      "p07",
+      "p06",
+      "p05",
+      "p10"
+    ],
+    "title": "안개 경보",
+    "artist": "윈슬로 호머",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Winslow_Homer_-_The_Fog_Warning_-_Google_Art_Project.jpg",
+    "license": "Public Domain"
+  }
+]

@@ -1,0 +1,89 @@
+# 명화 조각 원본. 퍼블릭도메인 소스만 사용한다 (Wikimedia Commons PD).
+# imageFile은 Wikimedia Commons에서 받은 실제 이미지(웹용 리사이즈, 가로 900px)를
+# public/images/paintings/에 동일 출처로 저장해 가리킨다.
+# caption은 임베딩에 사용될 한국어 서술 캡션이다.
+
+- id: p01
+  imageFile: starry-night.jpg
+  title: 별이 빛나는 밤
+  artist: 빈센트 반 고흐
+  sourceUrl: https://commons.wikimedia.org/wiki/File:Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg
+  license: Public Domain
+  caption: 소용돌이치는 밤하늘 아래 잠든 마을, 불안과 황홀이 뒤섞인 고요
+- id: p02
+  imageFile: great-wave.jpg
+  title: 가나가와 해변의 거대한 파도
+  artist: 가쓰시카 호쿠사이
+  sourceUrl: https://commons.wikimedia.org/wiki/File:Tsunami_by_hokusai_19th_century.jpg
+  license: Public Domain
+  caption: 거대한 파도 위 작은 배들, 자연 앞에 선 인간의 왜소함
+- id: p03
+  imageFile: girl-pearl-earring.jpg
+  title: 진주 귀걸이를 한 소녀
+  artist: 요하네스 페르메이르
+  sourceUrl: https://commons.wikimedia.org/wiki/File:Meisje_met_de_parel.jpg
+  license: Public Domain
+  caption: 어깨 너머로 돌아보는 소녀의 눈빛, 말하지 않은 사연을 품은 얼굴
+- id: p04
+  imageFile: the-scream.jpg
+  title: 절규
+  artist: 에드바르 뭉크
+  sourceUrl: "https://commons.wikimedia.org/wiki/File:Edvard_Munch,_1893,_The_Scream,_oil,_tempera_and_pastel_on_cardboard,_91_x_73_cm,_National_Gallery_of_Norway.jpg"
+  license: Public Domain
+  caption: 다리 위에서 두 손으로 얼굴을 감싼 채 터져 나오는 비명, 존재의 불안
+- id: p05
+  imageFile: wanderer-sea-of-fog.jpg
+  title: 안개 바다 위의 방랑자
+  artist: 카스파르 다비트 프리드리히
+  sourceUrl: https://commons.wikimedia.org/wiki/File:Caspar_David_Friedrich_-_Wanderer_above_the_sea_of_fog.jpg
+  license: Public Domain
+  caption: 안개로 뒤덮인 산맥을 등지고 선 사내, 정복과 고독이 함께 있는 정상
+- id: p06
+  imageFile: fighting-temeraire.jpg
+  title: 전함 테메레르
+  artist: 조지프 말로드 윌리엄 터너
+  sourceUrl: "https://commons.wikimedia.org/wiki/File:The_Fighting_Temeraire,_JMW_Turner,_National_Gallery.jpg"
+  license: Public Domain
+  caption: 낡은 군함이 예인선에 이끌려 해체장으로 향하는 노을 진 강, 영광의 끝
+- id: p07
+  imageFile: night-watch.jpg
+  title: 야경
+  artist: 렘브란트 판 레인
+  sourceUrl: https://commons.wikimedia.org/wiki/File:The_Night_Watch_-_HD.jpg
+  license: Public Domain
+  caption: 어둠 속에서 빛을 받으며 출동을 준비하는 민병대, 혼란과 위엄이 공존하는 순간
+- id: p08
+  imageFile: birth-of-venus.jpg
+  title: 비너스의 탄생
+  artist: 산드로 보티첼리
+  sourceUrl: "https://commons.wikimedia.org/wiki/File:Sandro_Botticelli_-_La_nascita_di_Venere_-_Google_Art_Project_-_edited.jpg"
+  license: Public Domain
+  caption: 조개껍데기를 타고 해안에 닿는 여신, 갓 태어난 존재의 무방비함
+- id: p09
+  imageFile: water-lilies.jpg
+  title: 수련
+  artist: 클로드 모네
+  sourceUrl: "https://commons.wikimedia.org/wiki/File:Claude_Monet_-_Water_Lilies_-_1906,_Ryerson.jpg"
+  license: Public Domain
+  caption: 연못 수면 위에 흩어진 빛과 그림자, 경계 없이 번지는 색
+- id: p10
+  imageFile: the-kiss.jpg
+  title: 키스
+  artist: 구스타프 클림트
+  sourceUrl: https://commons.wikimedia.org/wiki/File:Gustav_Klimt_016.jpg
+  license: Public Domain
+  caption: 금빛 무늬에 감싸여 서로를 안은 두 사람, 세상과 단절된 밀착
+- id: p11
+  imageFile: garden-earthly-delights.jpg
+  title: 세속적 쾌락의 동산
+  artist: 히에로니무스 보스
+  sourceUrl: https://commons.wikimedia.org/wiki/File:The_Garden_of_Earthly_Delights_by_Bosch_High_Resolution.jpg
+  license: Public Domain
+  caption: 낙원과 지옥 사이 기이한 형상들이 뒤엉킨 풍경, 욕망과 심판
+- id: p12
+  imageFile: fog-warning.jpg
+  title: 안개 경보
+  artist: 윈슬로 호머
+  sourceUrl: https://commons.wikimedia.org/wiki/File:Winslow_Homer_-_The_Fog_Warning_-_Google_Art_Project.jpg
+  license: Public Domain
+  caption: 짙은 안개 속에서 홀로 노를 젓는 어부, 돌아갈 방향을 가늠하는 긴장

@@ -1,0 +1,278 @@
+.pane {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #f4efe4;
+  touch-action: none;
+}
+
+.pane[data-tool='pencil'] {
+  cursor: text;
+}
+
+.pane[data-tool='thread'],
+.pane[data-tool='pouch'] {
+  cursor: crosshair;
+}
+
+.emptyHint {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #b1a68e;
+  font-size: 14px;
+  pointer-events: none;
+}
+
+/* ---- 내보내기 ---- */
+.exportBar {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 40;
+  display: flex;
+  gap: 8px;
+}
+
+.exportBar button {
+  padding: 6px 12px;
+  font-size: 12px;
+  color: #5c5443;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid #ddd4c0;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.exportBar button:hover:not(:disabled) {
+  background: #efe8d6;
+}
+
+.exportBar button:disabled {
+  color: #b1a68e;
+  cursor: not-allowed;
+}
+
+/* ---- 툴바 ---- */
+.toolbar {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid #ddd4c0;
+  border-radius: 999px;
+}
+
+.toolButton {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  font-size: 15px;
+  color: #5c5443;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.toolButton:hover {
+  background: #efe8d6;
+}
+
+.toolButton:focus-visible {
+  outline: 2px solid #8a7c5c;
+  outline-offset: 1px;
+}
+
+.toolButtonActive {
+  background: #e3d9bf;
+  border-color: #c3b697;
+  color: #3a3427;
+}
+
+.toolHint {
+  padding-right: 8px;
+  font-size: 12px;
+  color: #8a8272;
+  white-space: nowrap;
+}
+
+/* ---- 레이어: 주머니 배경 → 실타래 (SVG 오버레이) ---- */
+.overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.pouchShape {
+  fill: rgba(138, 124, 92, 0.1);
+  stroke: rgba(138, 124, 92, 0.28);
+  stroke-width: 1;
+  pointer-events: auto;
+  cursor: move;
+}
+
+.pouchShape:hover {
+  fill: rgba(138, 124, 92, 0.15);
+}
+
+.pouchShapeSelected {
+  stroke: rgba(90, 78, 52, 0.7);
+  stroke-width: 1.5;
+}
+
+.thread {
+  stroke: #8a7c5c;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  pointer-events: none;
+}
+
+.threadActive {
+  stroke: #4a412c;
+  stroke-width: 3.5;
+}
+
+.threadHitArea {
+  stroke: transparent;
+  stroke-width: 14;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+/* ---- 주머니 라벨 ---- */
+.pouchLabel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transform-origin: top left;
+  translate: -50% 0;
+}
+
+.pouchLabelText {
+  display: inline-block;
+  padding: 1px 8px;
+  font-size: 12px;
+  color: #5c5443;
+  background: rgba(244, 239, 228, 0.9);
+  border-radius: 999px;
+  white-space: nowrap;
+  cursor: text;
+}
+
+.pouchLabelInput {
+  width: 120px;
+  padding: 1px 6px;
+  font: inherit;
+  font-size: 12px;
+  color: #3a3427;
+  background: #fff;
+  border: 1px solid #c3b697;
+  border-radius: 999px;
+}
+
+/* ---- 레이어: 노드 ---- */
+.node {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 190px;
+  max-height: 190px;
+  padding: 14px;
+  background: #fdf8e8;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.16);
+  border-radius: 2px;
+  overflow: hidden;
+  cursor: grab;
+}
+
+.nodeSelected {
+  outline: 2px solid #6f6244;
+  outline-offset: 1px;
+}
+
+/* 실타래·주머니 도구로 고른 중인 노드 */
+.nodePending {
+  outline: 2px dashed #9a8a63;
+  outline-offset: 1px;
+}
+
+.nodeText {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #2c2a22;
+}
+
+.nodeImage {
+  display: block;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+}
+
+/* ---- 레이어: 메모 ---- */
+.memo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  padding: 2px 4px;
+  cursor: grab;
+}
+
+.memoText,
+.memoInput {
+  font-family: 'Segoe Script', 'Comic Sans MS', 'Gaegu', cursive;
+  font-size: 15px;
+  line-height: 1.45;
+  color: #4a4636;
+}
+
+.memoText {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.memoInput {
+  display: block;
+  width: 100%;
+  min-height: 24px;
+  padding: 0;
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-bottom: 1px dashed #b1a68e;
+  outline: none;
+  resize: none;
+  overflow: hidden;
+}
+
+.memoSelected {
+  outline: 1px dashed #6f6244;
+  outline-offset: 2px;
+}
+
+/* ---- 레이어: 선택 UI ---- */
+.selectionBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 30;
+  background: rgba(138, 124, 92, 0.1);
+  border: 1px solid rgba(90, 78, 52, 0.5);
+  pointer-events: none;
+}
