@@ -4,6 +4,7 @@ import { useIsDesktop } from './useIsDesktop';
 import { usePoolLoader } from './usePoolLoader';
 import { SurfaceLayer } from './surface/SurfaceLayer';
 import { CanvasLayer } from './canvas/CanvasLayer';
+import { CreatorCharacter } from './creator/CreatorCharacter';
 
 function App() {
   const isDesktop = useIsDesktop();
@@ -19,14 +20,17 @@ function App() {
   }
 
   return (
-    <div className={styles.layout}>
-      <div className={styles.canvasPane}>
-        <CanvasLayer ref={canvasPaneRef} />
+    <>
+      <CreatorCharacter />
+      <div className={styles.layout}>
+        <div className={styles.canvasPane}>
+          <CanvasLayer ref={canvasPaneRef} />
+        </div>
+        <div className={styles.surfacePane}>
+          <SurfaceLayer canvasPaneRef={canvasPaneRef} />
+        </div>
       </div>
-      <div className={styles.surfacePane}>
-        <SurfaceLayer canvasPaneRef={canvasPaneRef} />
-      </div>
-    </div>
+    </>
   );
 }
 

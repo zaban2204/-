@@ -34,6 +34,11 @@ export interface SurfaceSlice {
   removeSurfaceFragment: (fragmentId: string) => void; // TODO: 수명 만료/낚기 시 제거
   touchSurfaceFragment: (fragmentId: string) => void; // TODO: touched=true 처리
   setPaused: (paused: boolean) => void; // TODO: rAF/수명 타이머 정지·재개
+
+  // 조각을 캔버스에 성공적으로 낚아 올릴 때마다 증가한다.
+  // 창작자 캐릭터가 이 값의 변화를 감지해 낚싯대를 휘두르는 모션을 재생한다.
+  swingSignal: number;
+  triggerSwing: () => void;
 }
 
 // 되돌리기용 캔버스 스냅샷. 되돌리기는 캔버스 편집에만 적용되고
@@ -202,6 +207,9 @@ export const useAppStore = create<AppStore>()((set) => ({
       ),
     })),
   setPaused: (paused) => set({ isPaused: paused }),
+
+  swingSignal: 0,
+  triggerSwing: () => set((state) => ({ swingSignal: state.swingSignal + 1 })),
 
   // canvasSlice
   nodes: [],

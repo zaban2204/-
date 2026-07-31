@@ -8,7 +8,11 @@
 .canvasPane {
   width: 50%;
   height: 100%;
-  background: #f4efe4;
+  background-color: #f7f2e4;
+  background-image:
+    linear-gradient(rgba(150, 140, 110, 0.18) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(150, 140, 110, 0.18) 1px, transparent 1px);
+  background-size: 24px 24px;
   border-right: 1px solid #d8d0bd;
 }
 

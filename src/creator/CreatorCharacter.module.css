@@ -1,0 +1,65 @@
+.wrap {
+  position: fixed;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 50;
+  pointer-events: none;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.12));
+}
+
+.figure {
+  overflow: visible;
+}
+
+.stroke {
+  fill: #f7f2e4;
+  stroke: #2b2b2b;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.strokeThin {
+  fill: none;
+  stroke: #2b2b2b;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+}
+
+.fillDark {
+  fill: #2b2b2b;
+}
+
+.line {
+  fill: none;
+  stroke: #6b5a3a;
+  stroke-width: 1.4;
+  stroke-linecap: round;
+}
+
+.rod {
+  stroke: #7a5a33;
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+
+.rodArm {
+  transform-origin: 100px 88px;
+  animation: swing 0.55s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes swing {
+  0% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(-38deg);
+  }
+  60% {
+    transform: rotate(18deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

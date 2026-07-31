@@ -104,6 +104,7 @@ export function SurfaceLayer({ canvasPaneRef }: SurfaceLayerProps) {
   const touchSurfaceFragment = useAppStore((s) => s.touchSurfaceFragment);
   const markExhausted = useAppStore((s) => s.markExhausted);
   const addNode = useAppStore((s) => s.addNode);
+  const triggerSwing = useAppStore((s) => s.triggerSwing);
   const setPaused = useAppStore((s) => s.setPaused);
 
   const panelRef = useRef<HTMLDivElement>(null);
@@ -880,6 +881,7 @@ export function SurfaceLayer({ canvasPaneRef }: SurfaceLayerProps) {
       restoreCardToSurface(el);
       despawnFragment(drag.fragmentId);
       riseRelatedFragments(drag.fragmentId);
+      triggerSwing();
       return;
     }
 
