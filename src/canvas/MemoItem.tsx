@@ -1,7 +1,8 @@
-import { useEffect, useRef } from 'react';
 import type { PointerEvent as ReactPointerEvent } from 'react';
 import { useAppStore } from '../store';
 import type { Memo } from '../types';
+import { memoStylePreset } from './memoStyles';
+import { useDeferredFocus } from './useDeferredFocus';
 import styles from './canvas.module.css';
 
 interface MemoItemProps {
@@ -16,7 +17,7 @@ interface MemoItemProps {
 }
 
 // 연필 메모. 자유 드로잉이 아니라 텍스트 메모다 (PRD 4항 "메모를 할 수도").
-// 조각(포스트잇)과 혼동되지 않도록 배경 없이 손글씨 느낌으로 둔다.
+// 조각(포스트잇)과 혼동되지 않도록 배경 없이 둔다.
 export function MemoItem({
   memo,
   isSelected,
@@ -29,23 +30,7 @@ export function MemoItem({
 }: MemoItemProps) {
   const updateMemo = useAppStore((s) => s.updateMemo);
   const removeMemos = useAppStore((s) => s.removeMemos);
-  const textareaRef = useRef<HTMLTextAreaElement>(null);
-  // 입력창이 실제로 포커스를 받았는지. 포커스를 못 받은 채 들어온 blur를 그대로
-  // 처리하면 빈 메모가 곧바로 삭제되어 "클릭해도 아무 일도 없다"가 된다.
-  const hasFocusedRef = useRef(false);
-
-  useEffect(() => {
-    if (!isEditing) {
-      hasFocusedRef.current = false;
-      return;
-    }
-    // 같은 프레임에 focus를 잡으면 뒤따라오는 mousedown의 기본 동작(클릭한 요소로
-    // 포커스 이동)에 곧바로 빼앗긴다. 그 처리가 끝난 다음 프레임에 잡는다.
-    const raf = requestAnimationFrame(() => {
-      textareaRef.current?.focus();
-    });
-    return () => cancelAnimationFrame(raf);
-  }, [isEditing]);
+  const { ref: textareaRef, hasFocusedRef } = useDeferredFocus<HTMLTextAreaElement>(isEditing);
 
   function finish(text: string) {
     const trimmed = text.trim();
@@ -55,9 +40,12 @@ export function MemoItem({
     onFinishEditing();
   }
 
+  // 제목/소제목/본문 — 크기 단계에 따라 글자 크기가 달라진다
+  const sizeClass = styles[`memo_${memoStylePreset(memo.textStyle).kind}`];
+
   return (
     <div
-      className={`${styles.memo} ${isSelected ? styles.memoSelected : ''}`}
+      className={`${styles.memo} ${sizeClass} ${isSelected ? styles.memoSelected : ''}`}
       style={{ transform: `translate3d(${memo.x}px, ${memo.y}px, 0)`, width: memo.width }}
       onPointerDown={(event) => {
         if (isEditing) return;
@@ -80,7 +68,7 @@ export function MemoItem({
           ref={textareaRef}
           className={styles.memoInput}
           defaultValue={memo.text}
-          placeholder="메모"
+          placeholder={memoStylePreset(memo.textStyle).label}
           rows={1}
           onFocus={() => {
             hasFocusedRef.current = true;

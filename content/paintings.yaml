@@ -87,3 +87,1418 @@
   sourceUrl: https://commons.wikimedia.org/wiki/File:Winslow_Homer_-_The_Fog_Warning_-_Google_Art_Project.jpg
   license: Public Domain
   caption: 짙은 안개 속에서 홀로 노를 젓는 어부, 돌아갈 방향을 가늠하는 긴장
+
+# ---- 아래부터는 공개 API에서 무작위로 보충한 100점 (2026-07-31) ----
+# 출처: 메트로폴리탄 미술관 Open Access(퍼블릭도메인), 클리블랜드미술관 Open Access(CC0).
+# 두 곳 모두 프로그램 접근을 허용하는 공식 API다. 받아오는 스크립트는
+# scripts/fetch-museum-images.ts, 이 항목들을 만든 스크립트는 scripts/append-paintings.ts.
+# title·artist는 미술관이 제공한 원문 그대로 두고(각주 표기용), caption은 작품의
+# 제목·주제 태그를 근거로 직접 쓴 한국어 서술이다(임베딩 대상 텍스트).
+- id: p13
+  imageFile: seated-manjusri.jpg
+  title: "Seated Manjusri"
+  artist: "Unknown artist"
+  sourceUrl: https://clevelandart.org/art/1919.1020
+  license: "Cleveland Museum of Art (CC0)"
+  caption: "지혜의 보살이 홀로 앉아 있는 조선 불화, 금빛의 고요"
+- id: p14
+  imageFile: raja-bikram-singh-of-guler-smoking-a-hookah.jpg
+  title: "Raja Bikram Singh of Guler smoking a hookah"
+  artist: "Unknown artist"
+  sourceUrl: https://clevelandart.org/art/2018.89
+  license: "Cleveland Museum of Art (CC0)"
+  caption: "물담배를 든 왕의 초상, 연기 사이로 흐르는 한가한 오후"
+- id: p15
+  imageFile: zulaykha-in-her-palace-and-as-an-elderly-woman-w.jpg
+  title: "Zulaykha in her palace and as an elderly woman with Joseph (recto), from a Panj Ganj (Five Treasures) of Abd al- Rahman Jami (Persian, 1414–1492)"
+  artist: "Mushfiq"
+  sourceUrl: https://clevelandart.org/art/2013.315.1.a
+  license: "Cleveland Museum of Art (CC0)"
+  caption: "궁전의 여인과 늙은 그녀가 한 화면에, 한 사람의 두 시절"
+- id: p16
+  imageFile: lazarillo-de-tormes-and-his-blind-master.jpg
+  title: "Lazarillo de Tormes and His Blind Master"
+  artist: "Théodule Ribot"
+  sourceUrl: https://clevelandart.org/art/1980.282
+  license: "Cleveland Museum of Art (CC0)"
+  caption: "눈먼 주인을 이끄는 소년, 서로에게 기댄 두 사람의 길"
+- id: p17
+  imageFile: horse-race-at-the-kamo-shrine.jpg
+  title: "Horse Race at the Kamo Shrine"
+  artist: "Unknown artist"
+  sourceUrl: https://clevelandart.org/art/1976.95.1
+  license: "Cleveland Museum of Art (CC0)"
+  caption: "신사 앞을 달리는 경마, 흙먼지와 구경꾼의 함성"
+- id: p18
+  imageFile: paintings-after-ancient-masters-scholar-reading-.jpg
+  title: "Paintings after Ancient Masters: Scholar Reading in a Thatched Hut by a Waterfall"
+  artist: "Chen Hongshou"
+  sourceUrl: https://clevelandart.org/art/1979.27.2.18
+  license: "Cleveland Museum of Art (CC0)"
+  caption: "폭포 옆 초가에서 책을 읽는 선비, 물소리에 묻힌 글자"
+- id: p19
+  imageFile: maharana-jagat-singh-attending-the-raslila.jpg
+  title: "Maharana Jagat Singh Attending the Raslila"
+  artist: "Jai Ram"
+  sourceUrl: https://clevelandart.org/art/2011.141
+  license: "Cleveland Museum of Art (CC0)"
+  caption: "춤과 노래의 밤을 지켜보는 왕, 신의 놀이에 초대된 사람들"
+- id: p20
+  imageFile: old-trees-by-a-wintry-brook.jpg
+  title: "Old Trees by a Wintry Brook"
+  artist: "Wen Zhengming"
+  sourceUrl: https://clevelandart.org/art/1997.102
+  license: "Cleveland Museum of Art (CC0)"
+  caption: "겨울 개울가의 늙은 나무들, 잎을 다 버리고 남은 뼈대"
+- id: p21
+  imageFile: the-merchant-hears-of-his-wife-s-unfaithfulness-.jpg
+  title: "The merchant hears of his wife’s unfaithfulness (above); the unfaithful wife performs penance by plucking her hair (below), from a Tuti-nama (Tales of a Parrot): First Night"
+  artist: "Unknown artist"
+  sourceUrl: https://clevelandart.org/art/1962.279.10.b
+  license: "Cleveland Museum of Art (CC0)"
+  caption: "아내의 배신을 전해 듣는 상인, 위아래로 나뉜 죄와 벌"
+- id: p22
+  imageFile: preparation-for-the-marriage-of-mahmuda-to-the-y.jpg
+  title: "Preparation for the marriage of Mahmuda to the Young Vizier, from a Tuti-nama (Tales of a Parrot): Thirty-third Night"
+  artist: "Unknown artist"
+  sourceUrl: https://clevelandart.org/art/1962.279.219.b
+  license: "Cleveland Museum of Art (CC0)"
+  caption: "혼례를 준비하는 사람들, 이미 정해진 미래를 향한 분주함"
+- id: p23
+  imageFile: minamoto-no-nakakuni-visits-lady-kogo.jpg
+  title: "Minamoto no Nakakuni Visits Lady Kogō"
+  artist: "Kiyohara Yukinobu"
+  sourceUrl: https://clevelandart.org/art/1992.77
+  license: "Cleveland Museum of Art (CC0)"
+  caption: "숨어 사는 여인을 찾아온 사신, 달빛 아래의 재회"
+- id: p24
+  imageFile: krishna-returns-with-the-cowherds-to-braj-from-a.jpg
+  title: "Krishna returns with the cowherds to Braj, from a Bhagavata Purana"
+  artist: "Unknown artist"
+  sourceUrl: https://clevelandart.org/art/1971.301
+  license: "Cleveland Museum of Art (CC0)"
+  caption: "소 치는 이들과 함께 마을로 돌아오는 신, 저녁의 귀환"
+- id: p25
+  imageFile: the-daughter-of-the-merchant-of-mazanderan-asks-.jpg
+  title: "The daughter of the merchant of Mazanderan asks the gardener for the rose, from a Tuti-nama (Tales of a Parrot): Twelfth Night"
+  artist: "Unknown artist"
+  sourceUrl: https://clevelandart.org/art/1962.279.98.b
+  license: "Cleveland Museum of Art (CC0)"
+  caption: "정원사에게 장미 한 송이를 청하는 딸, 사소한 부탁이 여는 이야기"
+- id: p26
+  imageFile: vase-with-flower-arrangement-and-scrollwork.jpg
+  title: "Vase with flower arrangement and scrollwork"
+  artist: "Unknown artist"
+  sourceUrl: https://clevelandart.org/art/2013.354
+  license: "Cleveland Museum of Art (CC0)"
+  caption: "꽃을 가득 꽂은 화병, 덩굴무늬에 둘러싸인 정물"
+- id: p27
+  imageFile: the-sunlight.jpg
+  title: "The Sunlight"
+  artist: "Ture Nikolaus Cederström"
+  sourceUrl: https://clevelandart.org/art/1996.274
+  license: "Cleveland Museum of Art (CC0)"
+  caption: "빛이 쏟아지는 순간만을 붙잡은 화면, 제목이 곧 주제"
+- id: p28
+  imageFile: sugriva.jpg
+  title: "Sugriva"
+  artist: "Unknown artist"
+  sourceUrl: https://clevelandart.org/art/1975.73
+  license: "Cleveland Museum of Art (CC0)"
+  caption: "원숭이 왕의 초상, 신화 속 조력자의 얼굴"
+- id: p29
+  imageFile: krishna-asks-for-sweets-from-a-sursagar-of-surda.jpg
+  title: "Krishna asks for sweets, from a Sursagar of Surdas (Indian, c. 1480–1580)"
+  artist: "Unknown artist"
+  sourceUrl: https://clevelandart.org/art/1984.172
+  license: "Cleveland Museum of Art (CC0)"
+  caption: "단것을 달라 조르는 어린 신, 신성함 속의 응석"
+- id: p30
+  imageFile: the-devil-and-tom-walker.jpg
+  title: "The Devil and Tom Walker"
+  artist: "John Quidor"
+  sourceUrl: https://clevelandart.org/art/1967.18
+  license: "Cleveland Museum of Art (CC0)"
+  caption: "숲에서 악마와 거래하는 남자, 미국 이야기 속 파우스트"
+- id: p31
+  imageFile: grapes.jpg
+  title: "Grapes"
+  artist: "Sugai Baikan"
+  sourceUrl: https://clevelandart.org/art/1985.247
+  license: "Cleveland Museum of Art (CC0)"
+  caption: "포도 한 송이만 그린 화면, 단순한 것을 오래 본 눈"
+- id: p32
+  imageFile: return-from-the-fields.jpg
+  title: "Return from the Fields"
+  artist: "Jean-François Millet"
+  sourceUrl: https://clevelandart.org/art/1972.19
+  license: "Cleveland Museum of Art (CC0)"
+  caption: "들일을 마치고 돌아오는 사람들, 노동이 끝난 시간의 무게"
+- id: p33
+  imageFile: weizheng-riding-on-an-ox.jpg
+  title: "Weizheng Riding on an Ox"
+  artist: "Yamaguchi Sekkei"
+  sourceUrl: https://clevelandart.org/art/1973.86
+  license: "Cleveland Museum of Art (CC0)"
+  caption: "소를 타고 가는 사람, 서두르지 않는 여행"
+- id: p34
+  imageFile: paintings-after-ancient-masters-daoist-and-crane.jpg
+  title: "Paintings after Ancient Masters: Daoist and Crane in Autumn Landscape"
+  artist: "Chen Hongshou"
+  sourceUrl: https://clevelandart.org/art/1979.27.1.7
+  license: "Cleveland Museum of Art (CC0)"
+  caption: "가을 산의 도인과 학, 사람과 새가 나란히 늙어 가는 풍경"
+- id: p35
+  imageFile: white-robed-kannon-byakue-kannon.jpg
+  title: "White-Robed Kannon (Byakue Kannon)"
+  artist: "Unknown artist"
+  sourceUrl: https://clevelandart.org/art/1951.540
+  license: "Cleveland Museum of Art (CC0)"
+  caption: "흰 옷을 입고 물가에 앉은 관음, 자비의 정적"
+- id: p36
+  imageFile: lovers-and-beloveds-a-composite-of-scenes-from-p.jpg
+  title: "Lovers and beloveds: A composite of scenes from Persian, Urdu, and Sanskrit literature"
+  artist: "Chitarman II"
+  sourceUrl: https://clevelandart.org/art/2013.345
+  license: "Cleveland Museum of Art (CC0)"
+  caption: "여러 이야기의 연인들을 한 화면에 모은 그림, 사랑의 목록"
+- id: p37
+  imageFile: the-heroine-who-waits-anxiously-for-her-absent-l.jpg
+  title: "The Heroine Who Waits Anxiously for Her Absent Lover: Utka Nayika"
+  artist: "Unknown artist"
+  sourceUrl: https://clevelandart.org/art/2018.114
+  license: "Cleveland Museum of Art (CC0)"
+  caption: "오지 않는 사람을 기다리는 여인, 기다림 자체가 주제인 그림"
+- id: p38
+  imageFile: maharao-chattar-sal-reigned-1758-64-of-kota-in-a.jpg
+  title: "Maharao Chattar Sal (reigned 1758–64) of Kota in a Palanquin"
+  artist: "Unknown artist"
+  sourceUrl: https://clevelandart.org/art/1989.344
+  license: "Cleveland Museum of Art (CC0)"
+  caption: "가마에 실려 가는 왕, 들어 올려진 사람과 든 사람들"
+- id: p39
+  imageFile: paintings-after-ancient-masters-mr-five-willows-.jpg
+  title: "Paintings after Ancient Masters: Mr. Five Willows (Wuliu), Tao Yuanming"
+  artist: "Chen Hongshou"
+  sourceUrl: https://clevelandart.org/art/1979.27.2.12
+  license: "Cleveland Museum of Art (CC0)"
+  caption: "다섯 그루 버드나무의 은자, 벼슬을 버리고 돌아온 사람"
+- id: p40
+  imageFile: alpine-landscape-the-handegg-switzerland.jpg
+  title: "Alpine Landscape:  The Handegg, Switzerland"
+  artist: "Jean-Léon Gérôme"
+  sourceUrl: https://clevelandart.org/art/1980.262
+  license: "Cleveland Museum of Art (CC0)"
+  caption: "스위스 협곡의 알프스 풍경, 사람을 압도하는 암벽"
+- id: p41
+  imageFile: shiva-and-devi-on-gajasura-s-hide.jpg
+  title: "Shiva and Devi on Gajasura's hide"
+  artist: "Unknown artist"
+  sourceUrl: https://clevelandart.org/art/1952.587
+  license: "Cleveland Museum of Art (CC0)"
+  caption: "괴물의 가죽 위에 앉은 신들, 승리 뒤의 고요"
+- id: p42
+  imageFile: seated-amitabha.jpg
+  title: "Seated Amitābha"
+  artist: "Unknown artist"
+  sourceUrl: https://clevelandart.org/art/1994.94
+  license: "Cleveland Museum of Art (CC0)"
+  caption: "정면을 보고 앉은 아미타불, 오래된 금박의 침묵"
+- id: p43
+  imageFile: the-raja-of-ujjain-who-is-traveling-in-the-guise.jpg
+  title: "The Raja of Ujjain, who is traveling in the guise of a yogi, meets two brothers who ask him to equitably partition their father’s possession, from a Tuti-nama (Tales of a Parrot): Forty-sixth Night"
+  artist: "Unknown artist"
+  sourceUrl: https://clevelandart.org/art/1962.279.293.b
+  license: "Cleveland Museum of Art (CC0)"
+  caption: "수행자로 변장해 떠도는 왕이 형제의 분쟁을 재판하는 장면"
+- id: p44
+  imageFile: water-moon-kannon.jpg
+  title: "Water-Moon Kannon"
+  artist: "Gakuō Zōkyū"
+  sourceUrl: https://clevelandart.org/art/1985.110
+  license: "Cleveland Museum of Art (CC0)"
+  caption: "물에 뜬 달을 바라보는 관음, 잡을 수 없는 것을 보는 눈"
+- id: p45
+  imageFile: pradyumna-and-samvara-fight-with-maces-from-the-.jpg
+  title: "Pradyumna and Samvara fight with maces, from the \"Large Basohli Bhagavata Purana\""
+  artist: "Unknown artist"
+  sourceUrl: https://clevelandart.org/art/1960.184
+  license: "Cleveland Museum of Art (CC0)"
+  caption: "철퇴를 든 두 신의 격돌, 신화의 결투"
+- id: p46
+  imageFile: the-little-milkmaid.jpg
+  title: "The Little Milkmaid"
+  artist: "Théodule Ribot"
+  sourceUrl: https://clevelandart.org/art/1973.31
+  license: "Cleveland Museum of Art (CC0)"
+  caption: "우유를 나르는 어린 하녀, 일하는 아이의 얼굴"
+- id: p47
+  imageFile: yusuf-and-zulaykha-meeting.jpg
+  title: "Yusuf and Zulaykha meeting"
+  artist: "Unknown artist"
+  sourceUrl: https://clevelandart.org/art/1939.164
+  license: "Cleveland Museum of Art (CC0)"
+  caption: "마침내 마주친 두 사람, 오래 미뤄진 만남"
+- id: p48
+  imageFile: the-young-man-of-baghdad-reveals-his-true-identi.jpg
+  title: "The young man of Baghdad reveals his true identity to the Hashimi, from a Tuti-nama (Tales of a Parrot: Forty-eighth Night"
+  artist: "Unknown artist"
+  sourceUrl: https://clevelandart.org/art/1962.279.308.b
+  license: "Cleveland Museum of Art (CC0)"
+  caption: "정체를 밝히는 바그다드의 청년, 가면을 벗는 순간"
+- id: p49
+  imageFile: the-soldier-receives-a-garland-of-roses-from-his.jpg
+  title: "The soldier receives a garland of roses from his wife which will remain fresh as long as she is faithful, from a Tuti-nama (Tales of a Parrot): Fourth Night"
+  artist: "Unknown artist"
+  sourceUrl: https://clevelandart.org/art/1962.279.27.a
+  license: "Cleveland Museum of Art (CC0)"
+  caption: "아내가 건넨 장미 화관을 받는 병사, 시들지 않는다는 약속"
+- id: p50
+  imageFile: hanuman-with-rama-and-lakshmana-on-his-shoulders.jpg
+  title: "Hanuman with Rama and Lakshmana on his shoulders, from a Kalighat album"
+  artist: "Unknown artist"
+  sourceUrl: https://clevelandart.org/art/2003.120
+  license: "Cleveland Museum of Art (CC0)"
+  caption: "두 형제를 어깨에 태운 원숭이 신, 짐을 대신 지는 존재"
+- id: p51
+  imageFile: a-female-figure-standing-in-a-landscape-holding-.jpg
+  title: "A female figure standing in a landscape holding a four-stringed “khuuchir” and a lotus"
+  artist: "Unknown artist"
+  sourceUrl: https://clevelandart.org/art/2013.311
+  license: "Cleveland Museum of Art (CC0)"
+  caption: "현악기와 연꽃을 든 여인이 풍경 속에 홀로 서 있다"
+- id: p52
+  imageFile: children-dancing.jpg
+  title: "Children Dancing"
+  artist: "Le Nain"
+  sourceUrl: https://clevelandart.org/art/1957.489
+  license: "Cleveland Museum of Art (CC0)"
+  caption: "손을 맞잡고 춤추는 아이들, 어른들 사이의 작은 원"
+- id: p53
+  imageFile: raja-gulab-singh-1792-1857-of-jammu-and-kashmir.jpg
+  title: "Raja Gulab Singh (1792–1857) of Jammu and Kashmir"
+  artist: "Unknown artist"
+  sourceUrl: https://clevelandart.org/art/1925.1338
+  license: "Cleveland Museum of Art (CC0)"
+  caption: "왕의 측면 초상, 통치자의 정지된 옆얼굴"
+- id: p54
+  imageFile: storm-clouds.jpg
+  title: "Storm Clouds"
+  artist: "John Henry Twachtman"
+  sourceUrl: https://clevelandart.org/art/1935.217
+  license: "Cleveland Museum of Art (CC0)"
+  caption: "몰려오는 폭풍 구름, 아직 비는 내리지 않은 하늘"
+- id: p55
+  imageFile: fujiwara-no-muchimaro.jpg
+  title: "Fujiwara no Muchimaro"
+  artist: "Unknown artist"
+  sourceUrl: https://clevelandart.org/art/1983.5
+  license: "Cleveland Museum of Art (CC0)"
+  caption: "오래전 관리의 초상, 이름만 남은 얼굴"
+- id: p56
+  imageFile: hunting-on-horses.jpg
+  title: "Hunting on Horses"
+  artist: "Unknown artist"
+  sourceUrl: https://clevelandart.org/art/1915.680
+  license: "Cleveland Museum of Art (CC0)"
+  caption: "말을 달리며 사냥하는 무리, 흩어지는 짐승과 사람"
+- id: p57
+  imageFile: literary-gathering-in-the-orchid-pavilion.jpg
+  title: "Literary Gathering in the Orchid Pavilion"
+  artist: "Maruyama Ōkyo"
+  sourceUrl: https://clevelandart.org/art/1977.1
+  license: "Cleveland Museum of Art (CC0)"
+  caption: "난정에 모인 문인들, 술과 시가 오가는 물가"
+- id: p58
+  imageFile: rain-coming-pavilion-by-the-stone-bridge-at-mt-t.jpg
+  title: "Rain-coming Pavilion by the Stone Bridge at Mt. Tiantai"
+  artist: "Dai Xi"
+  sourceUrl: https://clevelandart.org/art/1979.54
+  license: "Cleveland Museum of Art (CC0)"
+  caption: "비가 오기 직전의 산중 정자, 돌다리 아래 물소리"
+- id: p59
+  imageFile: album-of-daoist-and-buddhist-themes-search-the-m.jpg
+  title: "Album of Daoist and Buddhist Themes: Search the Mountain: Leaf 46"
+  artist: "Unknown artist"
+  sourceUrl: https://clevelandart.org/art/2004.1.46
+  license: "Cleveland Museum of Art (CC0)"
+  caption: "산을 뒤지는 수행자들, 무엇을 찾는지 알 수 없는 탐색"
+- id: p60
+  imageFile: babur-meeting-with-sultan-ali-mirza-at-the-kohik.jpg
+  title: "Babur meeting with Sultan Ali Mirza at the Kohik River, from a Babur-nama (Memoirs of Babur)"
+  artist: "Unknown artist"
+  sourceUrl: https://clevelandart.org/art/1971.85
+  license: "Cleveland Museum of Art (CC0)"
+  caption: "강가에서 만난 두 군주, 회담과 경계"
+- id: p61
+  imageFile: raja-with-his-beloved.jpg
+  title: "Raja with his beloved"
+  artist: "Unknown artist"
+  sourceUrl: https://clevelandart.org/art/1989.336
+  license: "Cleveland Museum of Art (CC0)"
+  caption: "연인과 함께 앉은 왕, 권력 뒤의 사적인 시간"
+- id: p62
+  imageFile: painting-from-a-kalpa-sutra-indra-praises-the-em.jpg
+  title: "Painting from a Kalpa-sutra: Indra Praises the Embryo of Mahavira in the Womb of the Brahman Woman Devananda"
+  artist: "Unknown artist"
+  sourceUrl: https://clevelandart.org/art/1925.1339
+  license: "Cleveland Museum of Art (CC0)"
+  caption: "태어나기 전의 존재를 찬미하는 신, 아직 오지 않은 생"
+- id: p63
+  imageFile: the-harvesters.jpg
+  title: "The Harvesters"
+  artist: "Pieter Bruegel the Elder"
+  sourceUrl: https://www.metmuseum.org/art/collection/search/435809
+  license: "The Metropolitan Museum of Art (Public Domain)"
+  caption: "밀을 거두고 그늘에서 밥을 먹는 사람들, 노동과 낮잠이 한 화면에"
+- id: p64
+  imageFile: the-defense-of-champigny.jpg
+  title: "The Defense of Champigny"
+  artist: "Edouard Detaille"
+  sourceUrl: https://www.metmuseum.org/art/collection/search/436188
+  license: "The Metropolitan Museum of Art (Public Domain)"
+  caption: "전투 중인 병사들과 대포, 연기 속의 방어선"
+- id: p65
+  imageFile: birds-and-flowers-of-autumn-and-winter.jpg
+  title: "Birds and Flowers of Autumn and Winter"
+  artist: "Kano Chikanobu"
+  sourceUrl: https://www.metmuseum.org/art/collection/search/45729
+  license: "The Metropolitan Museum of Art (Public Domain)"
+  caption: "가을과 겨울의 새와 꽃, 계절이 바뀌는 자리의 생명"
+- id: p66
+  imageFile: rubens-helena-fourment-1614-1673-and-their-son-f.jpg
+  title: "Rubens, Helena Fourment (1614–1673), and Their Son Frans (1633–1678)"
+  artist: "Peter Paul Rubens"
+  sourceUrl: https://www.metmuseum.org/art/collection/search/437532
+  license: "The Metropolitan Museum of Art (Public Domain)"
+  caption: "아내와 아들을 데리고 걷는 화가의 가족 초상"
+- id: p67
+  imageFile: christ-crowned-with-thorns.jpg
+  title: "Christ Crowned with Thorns"
+  artist: "Antonello da Messina"
+  sourceUrl: https://www.metmuseum.org/art/collection/search/435580
+  license: "The Metropolitan Museum of Art (Public Domain)"
+  caption: "가시관을 쓴 얼굴, 고통을 정면으로 보여 주는 초상"
+- id: p68
+  imageFile: self-portrait.jpg
+  title: "Self-Portrait"
+  artist: "Gerrit Dou"
+  sourceUrl: https://www.metmuseum.org/art/collection/search/436210
+  license: "The Metropolitan Museum of Art (Public Domain)"
+  caption: "화가가 자기 얼굴을 들여다본 그림, 작업실의 자화상"
+- id: p69
+  imageFile: portrait-of-a-woman.jpg
+  title: "Portrait of a Woman"
+  artist: "Giovanni di Francesco del Cervelliera"
+  sourceUrl: https://www.metmuseum.org/art/collection/search/437859
+  license: "The Metropolitan Museum of Art (Public Domain)"
+  caption: "옆얼굴만 보이는 여인의 초상, 시선을 주지 않는 사람"
+- id: p70
+  imageFile: landscape.jpg
+  title: "Landscape"
+  artist: "Ren Xiong"
+  sourceUrl: https://www.metmuseum.org/art/collection/search/737762
+  license: "The Metropolitan Museum of Art (Public Domain)"
+  caption: "먹으로만 그린 산수, 여백이 절반인 풍경"
+- id: p71
+  imageFile: chinese-women-and-children-in-a-palace-garden.jpg
+  title: "Chinese Women and Children in a Palace Garden"
+  artist: "Kano Eitoku"
+  sourceUrl: https://www.metmuseum.org/art/collection/search/45695
+  license: "The Metropolitan Museum of Art (Public Domain)"
+  caption: "궁궐 정원의 여인들과 아이들, 담장 안의 하루"
+- id: p72
+  imageFile: landscape-of-the-four-seasons.jpg
+  title: "Landscape of the Four Seasons"
+  artist: "Kano Chōkichi"
+  sourceUrl: https://www.metmuseum.org/art/collection/search/39663
+  license: "The Metropolitan Museum of Art (Public Domain)"
+  caption: "네 계절을 한 폭에 이어 그린 산수"
+- id: p73
+  imageFile: lingering-rain-over-half-the-village.jpg
+  title: "Lingering Rain over Half the Village"
+  artist: "Urakami (Uragami) Gyokudō"
+  sourceUrl: https://www.metmuseum.org/art/collection/search/53458
+  license: "The Metropolitan Museum of Art (Public Domain)"
+  caption: "마을 절반에만 남은 비, 젖은 쪽과 마른 쪽"
+- id: p74
+  imageFile: the-villa-loredan-paese.jpg
+  title: "The Villa Loredan, Paese"
+  artist: "Francesco Guardi"
+  sourceUrl: https://www.metmuseum.org/art/collection/search/438116
+  license: "The Metropolitan Museum of Art (Public Domain)"
+  caption: "저택 앞에 모인 사람들과 개와 말, 어느 오후의 초대"
+- id: p75
+  imageFile: the-coronation-of-the-virgin.jpg
+  title: "The Coronation of the Virgin"
+  artist: "Annibale Carracci"
+  sourceUrl: https://www.metmuseum.org/art/collection/search/435853
+  license: "The Metropolitan Museum of Art (Public Domain)"
+  caption: "악기와 비둘기에 둘러싸인 즉위, 천상의 의식"
+- id: p76
+  imageFile: landscape-after-wu-zhen.jpg
+  title: "Landscape after Wu Zhen"
+  artist: "Wang Yuanqi"
+  sourceUrl: https://www.metmuseum.org/art/collection/search/49185
+  license: "The Metropolitan Museum of Art (Public Domain)"
+  caption: "옛 화가의 산수를 다시 그린 산수, 모방 속의 자기 붓"
+- id: p77
+  imageFile: boy-with-a-greyhound.jpg
+  title: "Boy with a Greyhound"
+  artist: "Paolo Veronese"
+  sourceUrl: https://www.metmuseum.org/art/collection/search/437890
+  license: "The Metropolitan Museum of Art (Public Domain)"
+  caption: "사냥개에 손을 얹은 소년, 아직 어른이 아닌 위엄"
+- id: p78
+  imageFile: landscapes-in-the-manner-of-song-and-yuan-master.jpg
+  title: "Landscapes in the manner of Song and Yuan masters"
+  artist: "Yun Shouping"
+  sourceUrl: https://www.metmuseum.org/art/collection/search/49162
+  license: "The Metropolitan Museum of Art (Public Domain)"
+  caption: "옛 대가의 방식으로 그린 산수, 계보를 잇는 붓"
+- id: p79
+  imageFile: the-mountain-ford.jpg
+  title: "The Mountain Ford"
+  artist: "Thomas Cole"
+  sourceUrl: https://www.metmuseum.org/art/collection/search/10496
+  license: "The Metropolitan Museum of Art (Public Domain)"
+  caption: "말을 이끌고 산속 물을 건너는 사람, 길이 끊긴 자리"
+- id: p80
+  imageFile: gray-weather-grande-jatte.jpg
+  title: "Gray Weather, Grande Jatte"
+  artist: "Georges Seurat"
+  sourceUrl: https://www.metmuseum.org/art/collection/search/438015
+  license: "The Metropolitan Museum of Art (Public Domain)"
+  caption: "흐린 날의 강가, 점으로 흩어진 회색 빛"
+- id: p81
+  imageFile: a-woman-gathering-faggots-at-ville-d-avray.jpg
+  title: "A Woman Gathering Faggots at Ville-d'Avray"
+  artist: "Camille Corot"
+  sourceUrl: https://www.metmuseum.org/art/collection/search/435990
+  license: "The Metropolitan Museum of Art (Public Domain)"
+  caption: "숲에서 나뭇가지를 줍는 여인, 안개 낀 노동"
+- id: p82
+  imageFile: the-choir-of-the-capuchin-church-in-rome.jpg
+  title: "The Choir of the Capuchin Church in Rome"
+  artist: "François Marius Granet"
+  sourceUrl: https://www.metmuseum.org/art/collection/search/436569
+  license: "The Metropolitan Museum of Art (Public Domain)"
+  caption: "성당 안에 늘어선 수사들, 돌벽에 갇힌 노래"
+- id: p83
+  imageFile: madonna-and-child.jpg
+  title: "Madonna and Child"
+  artist: "Giovanni Bellini"
+  sourceUrl: https://www.metmuseum.org/art/collection/search/435644
+  license: "The Metropolitan Museum of Art (Public Domain)"
+  caption: "아기를 안은 성모, 새 한 마리가 함께 있는 화면"
+- id: p84
+  imageFile: odes-of-the-state-of-bin-the-seventh-month.jpg
+  title: "Odes of the State of Bin: The Seventh Month"
+  artist: "Fei Qinghu"
+  sourceUrl: https://www.metmuseum.org/art/collection/search/854002
+  license: "The Metropolitan Museum of Art (Public Domain)"
+  caption: "옛 노래를 그림으로 옮긴 화면, 절기와 농사의 시"
+- id: p85
+  imageFile: the-aegean-sea.jpg
+  title: "The Aegean Sea"
+  artist: "Frederic Edwin Church"
+  sourceUrl: https://www.metmuseum.org/art/collection/search/10480
+  license: "The Metropolitan Museum of Art (Public Domain)"
+  caption: "무지개가 걸린 에게해, 폐허와 물빛"
+- id: p86
+  imageFile: altarpiece-retablo-with-scenes-from-the-passion.jpg
+  title: "Altarpiece (retablo) with Scenes from the Passion"
+  artist: "Master Morata"
+  sourceUrl: https://www.metmuseum.org/art/collection/search/463377
+  license: "The Metropolitan Museum of Art (Public Domain)"
+  caption: "여러 칸으로 나뉜 수난 장면들, 격자로 정리된 이야기"
+- id: p87
+  imageFile: portrait-of-a-young-man-reverse-girl-making-a-ga.jpg
+  title: "Portrait of a Young Man; (reverse) Girl Making a Garland"
+  artist: "Hans Süss von Kulmbach"
+  sourceUrl: https://www.metmuseum.org/art/collection/search/436834
+  license: "The Metropolitan Museum of Art (Public Domain)"
+  caption: "앞면은 청년의 초상, 뒷면은 화관을 엮는 소녀"
+- id: p88
+  imageFile: a-forest-at-dawn-with-a-deer-hunt.jpg
+  title: "A Forest at Dawn with a Deer Hunt"
+  artist: "Peter Paul Rubens"
+  sourceUrl: https://www.metmuseum.org/art/collection/search/437526
+  license: "The Metropolitan Museum of Art (Public Domain)"
+  caption: "새벽 숲의 사슴 사냥, 아직 어두운 나무 사이"
+- id: p89
+  imageFile: mrs-john-garden-ann-garden-1769-1842-and-her-chi.jpg
+  title: "Mrs. John Garden (Ann Garden, 1769–1842) and Her Children, John (1796–1854) and Ann Margaret (born 1793)"
+  artist: "John Hoppner"
+  sourceUrl: https://www.metmuseum.org/art/collection/search/436685
+  license: "The Metropolitan Museum of Art (Public Domain)"
+  caption: "두 아이와 함께 앉은 어머니의 초상"
+- id: p90
+  imageFile: musidora.jpg
+  title: "Musidora"
+  artist: "Thomas Sully"
+  sourceUrl: https://www.metmuseum.org/art/collection/search/12699
+  license: "The Metropolitan Museum of Art (Public Domain)"
+  caption: "물가에서 옷을 벗은 인물, 목욕 직전의 정지"
+- id: p91
+  imageFile: allegory-of-the-catholic-faith.jpg
+  title: "Allegory of the Catholic Faith"
+  artist: "Johannes Vermeer"
+  sourceUrl: https://www.metmuseum.org/art/collection/search/437877
+  license: "The Metropolitan Museum of Art (Public Domain)"
+  caption: "책과 사과와 뱀이 놓인 실내, 뜻을 숨긴 정물"
+- id: p92
+  imageFile: the-bay-of-naples.jpg
+  title: "The Bay of Naples"
+  artist: "Auguste Renoir"
+  sourceUrl: https://www.metmuseum.org/art/collection/search/437427
+  license: "The Metropolitan Museum of Art (Public Domain)"
+  caption: "나폴리 만의 바다와 배, 흔들리는 빛"
+- id: p93
+  imageFile: pavilion-on-mountain-stream.jpg
+  title: "Pavilion on Mountain Stream"
+  artist: "Sesshū Tōyō 雪舟等楊"
+  sourceUrl: https://www.metmuseum.org/art/collection/search/45649
+  license: "The Metropolitan Museum of Art (Public Domain)"
+  caption: "산 계곡에 걸린 정자, 물 위에 놓인 쉼터"
+- id: p94
+  imageFile: landscape-36152.jpg
+  title: "Landscape"
+  artist: "Li Xiuyi"
+  sourceUrl: https://www.metmuseum.org/art/collection/search/36152
+  license: "The Metropolitan Museum of Art (Public Domain)"
+  caption: "산과 물만 있는 화면, 사람이 아주 작게 들어간 산수"
+- id: p95
+  imageFile: seven-sages-of-the-bamboo-grove.jpg
+  title: "Seven Sages of the Bamboo Grove"
+  artist: "Sesson Shūkei"
+  sourceUrl: https://www.metmuseum.org/art/collection/search/53231
+  license: "The Metropolitan Museum of Art (Public Domain)"
+  caption: "대숲에 모인 일곱 현자, 세상을 등지고 부는 피리"
+- id: p96
+  imageFile: allegory-of-the-arts.jpg
+  title: "Allegory of the Arts"
+  artist: "Jacob de Wit"
+  sourceUrl: https://www.metmuseum.org/art/collection/search/437946
+  license: "The Metropolitan Museum of Art (Public Domain)"
+  caption: "하늘에 뜬 아기 천사들, 예술을 뜻하는 상징들"
+- id: p97
+  imageFile: mount-chocorua-and-lake.jpg
+  title: "Mount Chocorua and Lake"
+  artist: "William Trost Richards"
+  sourceUrl: https://www.metmuseum.org/art/collection/search/11902
+  license: "The Metropolitan Museum of Art (Public Domain)"
+  caption: "호수에 그대로 비친 산, 두 겹의 같은 풍경"
+- id: p98
+  imageFile: young-man-holding-a-book.jpg
+  title: "Young Man Holding a Book"
+  artist: "Master of the View of Saint Gudula"
+  sourceUrl: https://www.metmuseum.org/art/collection/search/437030
+  license: "The Metropolitan Museum of Art (Public Domain)"
+  caption: "책을 든 청년의 초상, 성당을 배경에 둔 얼굴"
+- id: p99
+  imageFile: the-grand-canal-venice-looking-south-toward-the-.jpg
+  title: "The Grand Canal, Venice, Looking South toward the Rialto Bridge"
+  artist: "Canaletto"
+  sourceUrl: https://www.metmuseum.org/art/collection/search/438100
+  license: "The Metropolitan Museum of Art (Public Domain)"
+  caption: "운하와 배와 다리로 이어진 도시의 오후"
+- id: p100
+  imageFile: canadian-rockies-lake-louise.jpg
+  title: "Canadian Rockies (Lake Louise)"
+  artist: "Albert Bierstadt"
+  sourceUrl: https://www.metmuseum.org/art/collection/search/10149
+  license: "The Metropolitan Museum of Art (Public Domain)"
+  caption: "빙하 호수와 로키의 봉우리, 사람이 없는 규모"
+- id: p101
+  imageFile: viewing-a-waterfall-from-a-mountain-pavilion.jpg
+  title: "Viewing a waterfall from a mountain pavilion"
+  artist: "Li Yin"
+  sourceUrl: https://www.metmuseum.org/art/collection/search/36133
+  license: "The Metropolitan Museum of Art (Public Domain)"
+  caption: "정자에 앉아 폭포를 보는 사람, 보는 일이 전부인 시간"
+- id: p102
+  imageFile: new-york-city-and-harbor-from-weehawken.jpg
+  title: "New York City and Harbor from Weehawken"
+  artist: "Pavel Petrovich Svinin"
+  sourceUrl: https://www.metmuseum.org/art/collection/search/12736
+  license: "The Metropolitan Museum of Art (Public Domain)"
+  caption: "강 건너에서 본 항구 도시, 아직 낮은 스카이라인"
+- id: p103
+  imageFile: landscape-36181.jpg
+  title: "Landscape"
+  artist: "Wu Guxiang"
+  sourceUrl: https://www.metmuseum.org/art/collection/search/36181
+  license: "The Metropolitan Museum of Art (Public Domain)"
+  caption: "배 한 척이 떠 있는 산수, 어디로 가는지 알 수 없는 물길"
+- id: p104
+  imageFile: brocaded-sea-of-peach-blossom-waves.jpg
+  title: "Brocaded Sea of Peach Blossom Waves"
+  artist: "Lu Zhi"
+  sourceUrl: https://www.metmuseum.org/art/collection/search/48873
+  license: "The Metropolitan Museum of Art (Public Domain)"
+  caption: "복사꽃처럼 이는 물결, 비단처럼 짜인 바다"
+- id: p105
+  imageFile: a-successful-hunt.jpg
+  title: "A Successful Hunt"
+  artist: "Henry François Farny"
+  sourceUrl: https://www.metmuseum.org/art/collection/search/682689
+  license: "The Metropolitan Museum of Art (Public Domain)"
+  caption: "눈 위를 말로 돌아오는 사냥꾼들, 성공 뒤의 침묵"
+- id: p106
+  imageFile: summer-day-on-conesus-lake.jpg
+  title: "Summer Day on Conesus Lake"
+  artist: "John Frederick Kensett"
+  sourceUrl: https://www.metmuseum.org/art/collection/search/11323
+  license: "The Metropolitan Museum of Art (Public Domain)"
+  caption: "여름 호수의 배와 잔물결, 아무 일도 일어나지 않는 오후"
+- id: p107
+  imageFile: the-strange-pines-of-mount-tiantai.jpg
+  title: "The strange pines of Mount Tiantai"
+  artist: "Dai Benxiao"
+  sourceUrl: https://www.metmuseum.org/art/collection/search/41488
+  license: "The Metropolitan Museum of Art (Public Domain)"
+  caption: "기이하게 뒤틀린 산의 소나무들, 오래 견딘 형태"
+- id: p108
+  imageFile: buddhist-luohans-crossing-the-sea-to-the-palace-.jpg
+  title: "Buddhist luohans crossing the sea to the palace of the dragon king"
+  artist: "Unidentified artist"
+  sourceUrl: https://www.metmuseum.org/art/collection/search/51524
+  license: "The Metropolitan Museum of Art (Public Domain)"
+  caption: "용왕의 궁으로 바다를 건너는 나한들, 짐승과 함께한 항해"
+- id: p109
+  imageFile: the-crucifixion.jpg
+  title: "The Crucifixion"
+  artist: "Fra Angelico"
+  sourceUrl: https://www.metmuseum.org/art/collection/search/437007
+  license: "The Metropolitan Museum of Art (Public Domain)"
+  caption: "십자가 아래 모인 사람들과 해골, 슬픔의 배치"
+- id: p110
+  imageFile: album-of-landscapes.jpg
+  title: "Album of Landscapes"
+  artist: "Yi Jeong"
+  sourceUrl: https://www.metmuseum.org/art/collection/search/929072
+  license: "The Metropolitan Museum of Art (Public Domain)"
+  caption: "여러 폭으로 이어지는 산수 화첩, 조선 문인의 붓"
+- id: p111
+  imageFile: the-great-statue-of-amida-buddha-at-kamakura-kno.jpg
+  title: "The Great Statue of Amida Buddha at Kamakura, Known as the Daibutsu, from the Priest's Garden"
+  artist: "John La Farge"
+  sourceUrl: https://www.metmuseum.org/art/collection/search/11375
+  license: "The Metropolitan Museum of Art (Public Domain)"
+  caption: "정원에서 본 가마쿠라 대불, 사람보다 오래된 얼굴"
+- id: p112
+  imageFile: italian-garden.jpg
+  title: "Italian Garden"
+  artist: "Friedrich August von Kaulbach"
+  sourceUrl: https://www.metmuseum.org/art/collection/search/436814
+  license: "The Metropolitan Museum of Art (Public Domain)"
+  caption: "사이프러스가 늘어선 이탈리아 정원, 정돈된 초록"
+
+# ---- 아래부터는 명화 이외의 사진·이미지 조각 100장 (2026-07-31) ----
+# 출처: Openverse(CC0/퍼블릭도메인 마크만 필터), 미국 의회도서관 FSA/OWI 다큐멘터리
+# 사진(미국 정부 저작물, 퍼블릭도메인), NASA(퍼블릭도메인). 파일은
+# public/images/photos/에 있다(명화는 public/images/paintings/와 구분).
+# 받아오는 스크립트는 scripts/fetch-open-images.ts, 이 항목을 만든 스크립트는
+# scripts/append-photos.ts. title·artist(creator)는 출처 원문 그대로,
+# caption은 제목과 검색 키워드를 근거로 직접 쓴 한국어 서술이다.
+- id: p113
+  imageFile: photos/rvs-at-fishing-bridge-campground.jpg
+  title: "RVs at Fishing Bridge Campground"
+  artist: "YellowstoneNPS"
+  sourceUrl: https://www.flickr.com/photos/80223459@N05/16527704538
+  license: "Public Domain Mark"
+  caption: "다리 이름을 딴 캠핑장, 강가에 나란히 선 캠핑카들"
+- id: p114
+  imageFile: photos/the-lighted-way-night-street-scene-in-butte-.jpg
+  title: "The Lighted Way: Night street scene in Butte, Montana, 1939."
+  artist: "polkbritton"
+  sourceUrl: https://www.flickr.com/photos/157979053@N04/32060386267
+  license: "Public Domain Mark"
+  caption: "불빛만 남은 밤거리, 1930년대 몬태나의 야경"
+- id: p115
+  imageFile: photos/scoglietto-lighthouse.jpg
+  title: "Scoglietto Lighthouse"
+  artist: "Salvatore Gerace"
+  sourceUrl: https://www.flickr.com/photos/45215772@N02/20524659122
+  license: "Public Domain Mark"
+  caption: "섬 끝에 홀로 선 등대, 파란빛에 둘러싸인 밤"
+- id: p116
+  imageFile: photos/wilmette-harbor-boat-storage.jpg
+  title: "Wilmette Harbor Boat Storage"
+  artist: "I'm nonpartisan"
+  sourceUrl: https://commons.wikimedia.org/w/index.php?curid=14588181
+  license: "CC0"
+  caption: "겨울 동안 뭍에 올려둔 배들, 항구의 쉬는 시간"
+- id: p117
+  imageFile: photos/roommate-s-cat-steve-4.jpg
+  title: "Roommate's cat Steve 4"
+  artist: "D Coetzee"
+  sourceUrl: https://www.flickr.com/photos/29507259@N02/3539249174
+  license: "CC0"
+  caption: "룸메이트가 기르는 고양이, 이름 붙은 익숙한 얼굴"
+- id: p118
+  imageFile: photos/forest-path-copy.jpg
+  title: "forest path copy"
+  artist: "bwstock"
+  sourceUrl: https://www.flickr.com/photos/16962092@N03/38294279151
+  license: "CC0"
+  caption: "숲 사이로 난 오솔길, 끝이 보이지 않는 초록"
+- id: p119
+  imageFile: photos/general-motors-holden-factory-acacia-ridge-b.jpg
+  title: "General Motors Holden factory, Acacia Ridge, Brisbane, 1967"
+  artist: "Queensland State Archives"
+  sourceUrl: https://www.flickr.com/photos/60455048@N02/35828271075
+  license: "Public Domain Mark"
+  caption: "1967년의 자동차 공장, 컨베이어 위의 반복된 노동"
+- id: p120
+  imageFile: photos/div-class-fn-i-kitchen-table-i-div.jpg
+  title: "Kitchen Table"
+  artist: "Stanley Mazur"
+  sourceUrl: https://commons.wikimedia.org/w/index.php?curid=82140901
+  license: "CC0"
+  caption: "빈 부엌 식탁, 누군가 돌아오기를 기다리는 자리"
+- id: p121
+  imageFile: photos/051032-pilgrim-street-market-street-newcastl.jpg
+  title: "051032:Pilgrim Street/Market Street Newcastle upon Tyne Unkown 1908"
+  artist: "Newcastle Libraries"
+  sourceUrl: https://www.flickr.com/photos/39821974@N06/4082042629
+  license: "Public Domain Mark"
+  caption: "1908년 뉴캐슬의 거리 시장, 전차가 지나던 시절"
+- id: p122
+  imageFile: photos/the-ronggeng-dancer-sadness.jpg
+  title: "the RONGGENG DANCER - sadness"
+  artist: "suRANTo dwi saputra"
+  sourceUrl: https://www.flickr.com/photos/125321218@N07/48645961241
+  license: "CC0"
+  caption: "슬픔이라는 제목의 무용수, 춤 속에 감춘 표정"
+- id: p123
+  imageFile: photos/rust-texture-1.jpg
+  title: "rust texture 1"
+  artist: "lisafree54"
+  sourceUrl: https://www.flickr.com/photos/136594255@N06/25413036250
+  license: "CC0"
+  caption: "녹슨 표면의 질감, 시간이 남긴 얼룩"
+- id: p124
+  imageFile: photos/chardon-square-ohio-gazebo-and-town-clock-un.jpg
+  title: "Chardon - Square - Ohio - Gazebo and Town Clock - United States"
+  artist: "Onasill - Bill Badzo - 149 Million Views - Thank Y"
+  sourceUrl: https://www.flickr.com/photos/7156765@N05/51701019855
+  license: "Public Domain Mark"
+  caption: "광장의 정자와 마을 시계탑, 미국 소도시의 중심"
+- id: p125
+  imageFile: photos/sea-waves.jpg
+  title: "sea waves"
+  artist: "alexsar982"
+  sourceUrl: https://www.flickr.com/photos/124787396@N03/40620150090
+  license: "CC0"
+  caption: "겹겹이 밀려오는 파도, 끝없이 반복되는 무늬"
+- id: p126
+  imageFile: photos/desert-horned-lizard-phrynosoma-platyrhinos-.jpg
+  title: "Desert horned lizard (Phrynosoma platyrhinos) near Pinto Wells"
+  artist: "Joshua Tree National Park"
+  sourceUrl: https://www.flickr.com/photos/115357548@N08/12488937245
+  license: "Public Domain Mark"
+  caption: "사막의 뿔도마뱀, 모래 빛깔로 위장한 몸"
+- id: p127
+  imageFile: photos/piano-perspective.jpg
+  title: "Piano perspective"
+  artist: "Carlos ZGZ"
+  sourceUrl: https://www.flickr.com/photos/31810462@N07/15678901168
+  license: "CC0"
+  caption: "건반이 이어지는 원근, 소리 나기 전의 침묵"
+- id: p128
+  imageFile: photos/clearing-madison-to-old-faithful-road-image-.jpg
+  title: "Clearing Madison to Old Faithful Road (image #1814)"
+  artist: "YellowstoneNPS"
+  sourceUrl: https://www.flickr.com/photos/80223459@N05/8592632731
+  license: "Public Domain Mark"
+  caption: "안개가 걷히는 도로, 국립공원으로 이어지는 길"
+- id: p129
+  imageFile: photos/unknown-early-20th-century-wedding-photograp.jpg
+  title: "Unknown early 20th Century wedding photograph"
+  artist: "whatsthatpicture"
+  sourceUrl: https://www.flickr.com/photos/24469639@N00/5064759388
+  license: "Public Domain Mark"
+  caption: "이름이 남지 않은 결혼사진, 20세기 초의 낯선 얼굴들"
+- id: p130
+  imageFile: photos/laundry-line-fsa-farm-security.jpg
+  title: "Laundry line. FSA (Farm Security"
+  artist: "libraryofcongress"
+  sourceUrl: https://www.rawpixel.com/image/12149285/image-plant-person-art
+  license: "CC0"
+  caption: "농가의 빨랫줄, 바람에 마르는 하루"
+- id: p131
+  imageFile: photos/bridge-to-city-at-night-with-lights.jpg
+  title: "Bridge to City at Night with Lights"
+  artist: "Image Catalog"
+  sourceUrl: https://www.flickr.com/photos/132795455@N08/18219838406
+  license: "CC0"
+  caption: "불빛으로 이어진 다리, 도시로 건너가는 밤"
+- id: p132
+  imageFile: photos/broken-glass-1.jpg
+  title: "Broken glass 1"
+  artist: "parameter_bond"
+  sourceUrl: https://www.flickr.com/photos/65720474@N03/8596890367
+  license: "Public Domain Mark"
+  caption: "산산조각 난 유리, 기하학적으로 흩어진 파편"
+- id: p133
+  imageFile: photos/coffee-cup-with-coffee-on-red-background.jpg
+  title: "Coffee Cup with Coffee on Red Background"
+  artist: "Image Catalog"
+  sourceUrl: https://www.flickr.com/photos/132795455@N08/17625638243
+  license: "CC0"
+  caption: "붉은 배경 위의 커피잔, 색이 도드라지는 정물"
+- id: p134
+  imageFile: photos/handwritten-letter-from-thomas-jefferson-180.jpg
+  title: "Handwritten letter from Thomas Jefferson, 1801 December 5"
+  artist: "Cambridge Room at the Cambridge Public Library"
+  sourceUrl: https://www.flickr.com/photos/140174526@N06/28156033305
+  license: "Public Domain Mark"
+  caption: "제퍼슨이 손으로 쓴 편지, 잉크에 남은 옛 필체"
+- id: p135
+  imageFile: photos/wildflowers-black-eagle-mine-road.jpg
+  title: "Wildflowers; Black Eagle Mine Road"
+  artist: "Joshua Tree National Park"
+  sourceUrl: https://www.flickr.com/photos/115357548@N08/29546483350
+  license: "Public Domain Mark"
+  caption: "폐광 도로변에 핀 들꽃, 버려진 땅의 생명력"
+- id: p136
+  imageFile: photos/neon-sign-on-the-wall.jpg
+  title: "Neon Sign on the Wall"
+  artist: "reklamy-AREK"
+  sourceUrl: https://www.flickr.com/photos/131418385@N05/37612777325
+  license: "CC0"
+  caption: "벽에 걸린 네온사인, 꺼지지 않는 밤의 글자"
+- id: p137
+  imageFile: photos/maxim-bicycles-c-1920.jpg
+  title: "Maxim Bicycles (c.1920)"
+  artist: "Susanlenox"
+  sourceUrl: https://www.flickr.com/photos/29710534@N05/4119544068
+  license: "Public Domain Mark"
+  caption: "1920년대 자전거 광고, 오래된 디자인의 매력"
+- id: p138
+  imageFile: photos/snow-field-trekking-in-bandai-highland-near-.jpg
+  title: "Snow field trekking in Bandai Highland near Aka-numa"
+  artist: "Yoshi Canopus"
+  sourceUrl: https://commons.wikimedia.org/w/index.php?curid=140140251
+  license: "CC0"
+  caption: "고원의 눈밭을 걷는 사람들, 발자국만 남는 흰 들판"
+- id: p139
+  imageFile: photos/rained-window.jpg
+  title: "rained window"
+  artist: "YU-bin"
+  sourceUrl: https://www.flickr.com/photos/12342431@N06/15713989809
+  license: "Public Domain Mark"
+  caption: "비에 젖은 창문, 빗방울이 그린 낙서"
+- id: p140
+  imageFile: photos/2022-grand-staircase-escalante-national-monu.jpg
+  title: "2022 Grand Staircase-Escalante National Monument Artist-in-Residence"
+  artist: "BLMUtah"
+  sourceUrl: https://www.flickr.com/photos/76340031@N02/52323244333
+  license: "Public Domain Mark"
+  caption: "국립기념물의 협곡, 계단처럼 층진 붉은 바위"
+- id: p141
+  imageFile: photos/william-lilly-astrologer-and-occultist.jpg
+  title: "William Lilly, Astrologer and Occultist"
+  artist: "lisby1"
+  sourceUrl: https://www.flickr.com/photos/60861613@N00/3960114365
+  license: "Public Domain Mark"
+  caption: "점성술사의 초상, 늙은 손이 쥔 오래된 지혜"
+- id: p142
+  imageFile: photos/summer-rain-explore.jpg
+  title: "Summer Rain (Explore)"
+  artist: "sjpowermac"
+  sourceUrl: https://www.flickr.com/photos/41890311@N06/29344720511
+  license: "CC0"
+  caption: "여름비 속의 우산, 젖으면서도 걷는 사람"
+- id: p143
+  imageFile: photos/palmar-human-left-hand.jpg
+  title: "palmar human left hand"
+  artist: "krihsnasri"
+  sourceUrl: https://www.flickr.com/photos/144397451@N07/30961017405
+  license: "CC0"
+  caption: "손바닥을 펼친 사진, 손금처럼 새겨진 삶의 흔적"
+- id: p144
+  imageFile: photos/abandoned-building-by-indiana-and-ohio-roadw.jpg
+  title: "Abandoned building by Indiana and Ohio Roadway"
+  artist: "dankeck"
+  sourceUrl: https://www.flickr.com/photos/140641142@N05/52241814541
+  license: "CC0"
+  caption: "길가에 버려진 건물, 창문 없이 서 있는 뼈대"
+- id: p145
+  imageFile: photos/mountain-fog-speedwell-nc.jpg
+  title: "Mountain Fog, Speedwell, NC"
+  artist: "w_lemay"
+  sourceUrl: https://www.flickr.com/photos/59081381@N03/28223938918
+  license: "CC0"
+  caption: "산자락을 덮은 안개, 능선이 지워지는 순간"
+- id: p146
+  imageFile: photos/guitar.jpg
+  title: "Guitar"
+  artist: "Photo Cindy"
+  sourceUrl: https://www.flickr.com/photos/13631562@N00/2352795172
+  license: "Public Domain Mark"
+  caption: "홀로 놓인 기타, 연주자를 기다리는 악기"
+- id: p147
+  imageFile: photos/mirror-experiment-explored.jpg
+  title: "Mirror Experiment (Explored)"
+  artist: "pasukaru76"
+  sourceUrl: https://www.flickr.com/photos/38451115@N04/5968328838
+  license: "CC0"
+  caption: "거울 속에 비친 실험, 반사가 만든 또 다른 장면"
+- id: p148
+  imageFile: photos/used-antique-books-old-old-book-close-book.jpg
+  title: "Used Antique Books Old Old Book Close Book"
+  artist: "Motilal Books"
+  sourceUrl: https://www.flickr.com/photos/145498752@N06/34894103510
+  license: "Public Domain Mark"
+  caption: "손때 묻은 오래된 책들, 가죽 표지의 냄새"
+- id: p149
+  imageFile: photos/belton-train-station.jpg
+  title: "Belton Train Station"
+  artist: "GlacierNPS"
+  sourceUrl: https://www.flickr.com/photos/43288043@N04/4458515244
+  license: "Public Domain Mark"
+  caption: "작은 마을의 기차역, 오는 사람도 가는 사람도 없는 시간"
+- id: p150
+  imageFile: photos/negro-barber-shop-atlanta-georgia.jpg
+  title: "Negro barber shop. Atlanta, Georgia"
+  artist: "evans, walker"
+  sourceUrl: http://www.loc.gov/item/2017762273/
+  license: "Public Domain (U.S. Government work)"
+  caption: "애틀랜타의 이발소, 손님을 기다리는 의자"
+- id: p151
+  imageFile: photos/harvesting-celery-sanford-florida.jpg
+  title: "Harvesting celery, Sanford, Florida"
+  artist: "rothstein, arthur"
+  sourceUrl: http://www.loc.gov/item/2017721915/
+  license: "Public Domain (U.S. Government work)"
+  caption: "샐러리 밭의 수확, 허리 굽힌 사람들의 노동"
+- id: p152
+  imageFile: photos/general-store-jarreau-louisiana.jpg
+  title: "General store. Jarreau, Louisiana"
+  artist: "lee, russell"
+  sourceUrl: http://www.loc.gov/item/2017781754/
+  license: "Public Domain (U.S. Government work)"
+  caption: "루이지애나의 잡화점, 없는 것 없이 다 파는 가게"
+- id: p153
+  imageFile: photos/pickers-in-cotton-field-southern-san-joaquin.jpg
+  title: "Pickers in cotton field. Southern San Joaquin Valley, California"
+  artist: "lange, dorothea"
+  sourceUrl: http://www.loc.gov/item/2017763303/
+  license: "Public Domain (U.S. Government work)"
+  caption: "목화밭의 일꾼들, 흰 솜이 가득한 들판"
+- id: p154
+  imageFile: photos/migrant-field-workers-tulare-migrant-camp-vi.jpg
+  title: "Migrant field workers. Tulare migrant camp. Visalia, California"
+  artist: "rothstein, arthur"
+  sourceUrl: http://www.loc.gov/item/2017774648/
+  license: "Public Domain (U.S. Government work)"
+  caption: "이주 노동자 캠프, 계절을 따라 옮겨 다니는 삶"
+- id: p155
+  imageFile: photos/gas-station-frederick-maryland.jpg
+  title: "Gas station, Frederick, Maryland"
+  artist: "vachon, john"
+  sourceUrl: http://www.loc.gov/item/2017716833/
+  license: "Public Domain (U.S. Government work)"
+  caption: "메릴랜드의 주유소, 지나가는 길 위의 쉼표"
+- id: p156
+  imageFile: photos/dust-storm-colorado.jpg
+  title: "Dust storm. Colorado"
+  artist: "ward, j. h."
+  sourceUrl: http://www.loc.gov/item/2017759523/
+  license: "Public Domain (U.S. Government work)"
+  caption: "콜로라도를 덮친 흙바람, 하늘이 흙빛으로 변한 날"
+- id: p157
+  imageFile: photos/interior-of-kitchen-greenhills-ohio.jpg
+  title: "Interior of kitchen. Greenhills, Ohio"
+  artist: "FSA/OWI"
+  sourceUrl: http://www.loc.gov/item/2017769351/
+  license: "Public Domain (U.S. Government work)"
+  caption: "오하이오 어느 집의 부엌, 소박한 살림살이"
+- id: p158
+  imageFile: photos/children-leaving-high-school.jpg
+  title: "Children leaving high school"
+  artist: "FSA/OWI"
+  sourceUrl: http://www.loc.gov/item/2017759174/
+  license: "Public Domain (U.S. Government work)"
+  caption: "학교를 나서는 아이들, 하루가 끝나는 시각"
+- id: p159
+  imageFile: photos/interior-of-church-saint-martinville-louisia.jpg
+  title: "Interior of church. Saint Martinville, Louisiana"
+  artist: "lee, russell"
+  sourceUrl: http://www.loc.gov/item/2017781822/
+  license: "Public Domain (U.S. Government work)"
+  caption: "루이지애나 성당의 내부, 텅 빈 신도석의 고요"
+- id: p160
+  imageFile: photos/main-street-herrin-illinois.jpg
+  title: "Main street, Herrin, Illinois"
+  artist: "rothstein, arthur"
+  sourceUrl: http://www.loc.gov/item/2017724328/
+  license: "Public Domain (U.S. Government work)"
+  caption: "일리노이 소도시의 큰길, 간판이 늘어선 거리"
+- id: p161
+  imageFile: photos/front-porch-chanute-kansas.jpg
+  title: "Front porch. Chanute, Kansas"
+  artist: "vachon, john"
+  sourceUrl: http://www.loc.gov/item/2017811249/
+  license: "Public Domain (U.S. Government work)"
+  caption: "캔자스 집의 앞 현관, 저녁마다 앉는 자리"
+- id: p162
+  imageFile: photos/truck-driver-in-diner-clinton-indiana.jpg
+  title: "Truck driver in diner. Clinton, Indiana"
+  artist: "rothstein, arthur"
+  sourceUrl: http://www.loc.gov/item/2017779666/
+  license: "Public Domain (U.S. Government work)"
+  caption: "식당에서 쉬는 트럭 운전사, 긴 길 위의 한 끼"
+- id: p163
+  imageFile: photos/dance-hall-saturday-night-marshalltown-iowa.jpg
+  title: "Dance hall, Saturday night. Marshalltown, Iowa"
+  artist: "rothstein, arthur"
+  sourceUrl: http://www.loc.gov/item/2017779649/
+  license: "Public Domain (U.S. Government work)"
+  caption: "토요일 밤의 댄스홀, 한 주의 피로를 터는 시간"
+- id: p164
+  imageFile: photos/sts-47-view-of-the-aurora-australis.jpg
+  title: "STS-47 view of the Aurora Australis"
+  artist: "NASA (JSC)"
+  sourceUrl: https://images.nasa.gov/details/STS047-20-015
+  license: "Public Domain (NASA)"
+  caption: "우주에서 본 남극 오로라, 지구를 감싼 초록빛 띠"
+- id: p165
+  imageFile: photos/view-of-skylab-space-station-cluster-in-eart.jpg
+  title: "View of Skylab space station cluster in Earth orbit from CSM"
+  artist: "NASA (JSC)"
+  sourceUrl: https://images.nasa.gov/details/sl4-143-4706
+  license: "Public Domain (NASA)"
+  caption: "지구 궤도의 우주정거장, 검은 배경 위의 인공 별"
+- id: p166
+  imageFile: photos/flag-of-the-u-s-deployed-on-surface-of-the-m.jpg
+  title: "Flag of the U.S. deployed on surface of the Moon"
+  artist: "NASA (JSC)"
+  sourceUrl: https://images.nasa.gov/details/as11-37-5545
+  license: "Public Domain (NASA)"
+  caption: "달 표면에 꽂힌 깃발, 먼지 하나 날리지 않는 정적"
+- id: p167
+  imageFile: photos/ant-nebula.jpg
+  title: "Ant Nebula"
+  artist: "NASA (JPL)"
+  sourceUrl: https://images.nasa.gov/details/PIA04216
+  license: "Public Domain (NASA)"
+  caption: "개미 성운, 죽어가는 별이 뿜어낸 두 날개"
+- id: p168
+  imageFile: photos/jupiter-plume.jpg
+  title: "Jupiter Plume"
+  artist: "NASA (JPL)"
+  sourceUrl: https://images.nasa.gov/details/PIA01518
+  license: "Public Domain (NASA)"
+  caption: "목성의 소용돌이, 기체 행성의 거대한 폭풍"
+- id: p169
+  imageFile: photos/partial-solar-eclipse-in-new-orleans.jpg
+  title: "Partial Solar Eclipse in New Orleans"
+  artist: "NASA (MSFC)"
+  sourceUrl: https://images.nasa.gov/details/MAF_20240408_NOLAeclipse05
+  license: "Public Domain (NASA)"
+  caption: "뉴올리언스의 부분일식, 낮에 찾아온 그림자"
+- id: p170
+  imageFile: photos/saturn-atmosphere.jpg
+  title: "Saturn Atmosphere"
+  artist: "NASA (JPL)"
+  sourceUrl: https://images.nasa.gov/details/PIA01973
+  license: "Public Domain (NASA)"
+  caption: "토성의 대기, 줄무늬로 흐르는 가스"
+- id: p171
+  imageFile: photos/young-stars-at-home-in-ancient-cluster.jpg
+  title: "Young Stars at Home in Ancient Cluster"
+  artist: "NASA (GSFC)"
+  sourceUrl: https://images.nasa.gov/details/GSFC_20171208_Archive_e001789
+  license: "Public Domain (NASA)"
+  caption: "오래된 성단 속 젊은 별들, 나이를 거스른 빛"
+- id: p172
+  imageFile: photos/galaxy-ngc5474.jpg
+  title: "Galaxy NGC5474"
+  artist: "NASA (JPL)"
+  sourceUrl: https://images.nasa.gov/details/PIA04634
+  license: "Public Domain (NASA)"
+  caption: "비대칭으로 일그러진 은하, 중력이 흔든 나선"
+- id: p173
+  imageFile: photos/mars-surface-beneath-phoenix.jpg
+  title: "Mars Surface Beneath Phoenix"
+  artist: "NASA (JPL)"
+  sourceUrl: https://images.nasa.gov/details/PIA10739
+  license: "Public Domain (NASA)"
+  caption: "화성 탐사선 아래의 표면, 붉은 흙의 클로즈업"
+- id: p174
+  imageFile: photos/washed-out-bridge-at-rescue-creek-2.jpg
+  title: "Washed-out bridge at Rescue Creek (2)"
+  artist: "YellowstoneNPS"
+  sourceUrl: https://www.flickr.com/photos/80223459@N05/52142552912
+  license: "Public Domain Mark"
+  caption: "물에 쓸려 나간 다리, 홍수가 지나간 자리"
+- id: p175
+  imageFile: photos/chaika-iii-night-streets-4.jpg
+  title: "Chaika III - Night Streets 4"
+  artist: "Kojotisko"
+  sourceUrl: https://www.flickr.com/photos/98796230@N03/15040246190
+  license: "CC0"
+  caption: "브르노의 밤거리, 가로등만 켜진 골목"
+- id: p176
+  imageFile: photos/yaquina-head-lighthouse-winter-storm-oregon.jpg
+  title: "Yaquina Head lighthouse, winter storm, Oregon"
+  artist: "Bonnie Moreland (free images)"
+  sourceUrl: https://www.flickr.com/photos/66741228@N05/25807306508
+  license: "Public Domain Mark"
+  caption: "겨울 폭풍 속의 등대, 파도를 견디는 하얀 탑"
+- id: p177
+  imageFile: photos/marblehead-massachusetts-harbor-boats-sky-gr.jpg
+  title: "Marblehead Massachusetts harbor boats sky grasses"
+  artist: "Tomwsulcer"
+  sourceUrl: https://commons.wikimedia.org/w/index.php?curid=29018441
+  license: "CC0"
+  caption: "매사추세츠 항구의 배들, 하늘과 풀 사이에 정박한"
+- id: p178
+  imageFile: photos/cat.jpg
+  title: "Cat"
+  artist: "Burnt Pineapple Productions"
+  sourceUrl: https://www.flickr.com/photos/51686021@N07/42700002412
+  license: "CC0"
+  caption: "제목조차 그냥 고양이, 있는 그대로의 존재"
+- id: p179
+  imageFile: photos/forest-path-3840x2160-xsnowleopardx.jpg
+  title: "Forest Path. [3840x2160] - xSnowLeopardx"
+  artist: "Douglas Tofoli"
+  sourceUrl: https://www.flickr.com/photos/141973883@N05/27905518931
+  license: "Public Domain Mark"
+  caption: "고화질로 담은 숲길, 잎사귀 하나까지 선명한"
+- id: p180
+  imageFile: photos/child-labor-boy-lost-arm-running-saw-in-box-.jpg
+  title: "Child Labor: Boy lost arm running saw in box factory, 1909"
+  artist: "Kelly Short6"
+  sourceUrl: https://www.flickr.com/photos/84269586@N07/7717440780
+  license: "Public Domain Mark"
+  caption: "1909년 아동노동의 기록, 공장이 삼킨 어린 팔"
+- id: p181
+  imageFile: photos/bobby-on-the-kitchen-table.jpg
+  title: "Bobby on the kitchen table"
+  artist: "madraban"
+  sourceUrl: https://www.flickr.com/photos/56844220@N00/1467712216
+  license: "Public Domain Mark"
+  caption: "부엌 식탁 위에 올라앉은 아이, 금지된 자리의 장난"
+- id: p182
+  imageFile: photos/065897-carliol-house-pilgrim-street-market-s.jpg
+  title: "065897:Carliol House Pilgrim Street/Market Street Newcastle upon Tyne Unknown 1927"
+  artist: "Newcastle Libraries"
+  sourceUrl: https://www.flickr.com/photos/39821974@N06/4089622717
+  license: "Public Domain Mark"
+  caption: "1927년 뉴캐슬의 건물, 상업 지구의 오래된 얼굴"
+- id: p183
+  imageFile: photos/dancer-at-nae-regrets-performance.jpg
+  title: "Dancer at Nae Regrets performance"
+  artist: "D Coetzee"
+  sourceUrl: https://www.flickr.com/photos/29507259@N02/3624208781
+  license: "CC0"
+  caption: "공연 중인 무용수, 후회 없다는 제목의 몸짓"
+- id: p184
+  imageFile: photos/rust-texture.jpg
+  title: "Rust texture"
+  artist: "ahlea"
+  sourceUrl: https://www.flickr.com/photos/73946419@N07/6668580465
+  license: "CC0"
+  caption: "출처 표기 없이 써도 되는 녹의 질감, 자유로운 얼룩"
+- id: p185
+  imageFile: photos/old-faithful-inn-clock-on-fireplace-in-the-l.jpg
+  title: "Old Faithful Inn, clock on fireplace in the lobby"
+  artist: "YellowstoneNPS"
+  sourceUrl: https://www.flickr.com/photos/80223459@N05/9408396393
+  license: "Public Domain Mark"
+  caption: "벽난로 위에 걸린 시계, 국립공원 숙소의 로비"
+- id: p186
+  imageFile: photos/dragon-robes-sea-waves-decoration-17th-centu.jpg
+  title: "Dragon robes sea-waves decoration 17th century"
+  artist: "Unknown"
+  sourceUrl: https://commons.wikimedia.org/w/index.php?curid=118227247
+  license: "CC0"
+  caption: "용포에 수놓인 파도무늬, 17세기 장식의 문양"
+- id: p187
+  imageFile: photos/nicotiana-rustica-seeds-from-desert-botanica.jpg
+  title: "Nicotiana rustica, seeds, from desert botanical garden_2014-02-27-15.57.04 ZS PMax"
+  artist: "Sam Droege"
+  sourceUrl: https://www.flickr.com/photos/54563451@N08/12822529613
+  license: "Public Domain Mark"
+  caption: "사막 식물원의 씨앗 클로즈업, 작은 것들의 확대"
+- id: p188
+  imageFile: photos/piano-hands.jpg
+  title: "Piano Hands"
+  artist: "cogdogblog"
+  sourceUrl: https://www.flickr.com/photos/37996646802@N01/460089931
+  license: "CC0"
+  caption: "건반 위의 두 손, 소리가 되기 직전의 자세"
+- id: p189
+  imageFile: photos/golden-sunrise-and-fog-big-lake-oregon.jpg
+  title: "Golden sunrise and fog Big Lake, Oregon"
+  artist: "Bonnie Moreland (free images)"
+  sourceUrl: https://www.flickr.com/photos/66741228@N05/51511926478
+  license: "Public Domain Mark"
+  caption: "안개 낀 호수의 황금빛 일출, 물과 빛이 섞이는 순간"
+- id: p190
+  imageFile: photos/colin-and-hannah-s-wedding.jpg
+  title: "colin and hannah's wedding"
+  artist: "garethpatterson1"
+  sourceUrl: https://www.flickr.com/photos/68107928@N08/8393154652
+  license: "Public Domain Mark"
+  caption: "흑백으로 남은 결혼사진, 두 사람의 시작"
+- id: p191
+  imageFile: photos/laundry-line-back-cottage-permanent.jpg
+  title: "Laundry line back cottage 'permanent'"
+  artist: "libraryofcongress"
+  sourceUrl: https://www.rawpixel.com/image/12109831/image-plant-person-grass
+  license: "CC0"
+  caption: "농가 뒤뜰의 빨랫줄, 집게로 고정된 옷가지들"
+- id: p192
+  imageFile: photos/abstract-city-lights-night-storm-seattle-was.jpg
+  title: "Abstract city lights, night, storm, Seattle, Washington, USA"
+  artist: "Wonderlane"
+  sourceUrl: https://www.flickr.com/photos/71401718@N00/6233280027
+  license: "CC0"
+  caption: "폭풍우 치는 시애틀의 밤, 흔들리며 번진 도시 불빛"
+- id: p193
+  imageFile: photos/broken-glass-0017-21.jpg
+  title: "broken glass 0017_21"
+  artist: "roland"
+  sourceUrl: https://www.flickr.com/photos/35034347371@N01/23757245823
+  license: "CC0"
+  caption: "골목에 흩어진 깨진 유리, 사고인지 다툼인지 모를 흔적"
+- id: p194
+  imageFile: photos/black-and-white-coffee-cup-apple.jpg
+  title: "black-and-white-coffee-cup-apple"
+  artist: "pixellaphoto"
+  sourceUrl: https://www.flickr.com/photos/137643065@N06/23697457474
+  license: "CC0"
+  caption: "흑백으로 찍은 커피잔과 사과, 단순한 정물의 대비"
+- id: p195
+  imageFile: photos/handwritten-letter-from-george-washington-17.jpg
+  title: "Handwritten letter from George Washington, 1795 April 14"
+  artist: "Cambridge Room at the Cambridge Public Library"
+  sourceUrl: https://www.flickr.com/photos/140174526@N06/28052064982
+  license: "Public Domain Mark"
+  caption: "워싱턴이 쓴 편지, 새 나라를 만들던 손글씨"
+- id: p196
+  imageFile: photos/wildflowers-below-clements-mountain-portrait.jpg
+  title: "Wildflowers Below Clements Mountain Portrait"
+  artist: "GlacierNPS"
+  sourceUrl: https://www.flickr.com/photos/43288043@N04/20360598520
+  license: "Public Domain Mark"
+  caption: "산 아래 들꽃 무리, 국립공원의 짧은 봄"
+- id: p197
+  imageFile: photos/chicago-illinois-hotel-lasalle-parking-garag.jpg
+  title: "Chicago Illinois - Hotel LaSalle Parking Garage - Neon Sign with Pointer - Now LOST"
+  artist: "Onasill - Bill Badzo - OFF- VACATION"
+  sourceUrl: https://www.flickr.com/photos/7156765@N05/51618790407
+  license: "Public Domain Mark"
+  caption: "이제는 사라진 시카고 호텔의 네온 간판, 남은 것은 사진뿐"
+- id: p198
+  imageFile: photos/early-1900s-bicycle-and-its-proud-owner.jpg
+  title: "Early 1900s bicycle and its proud owner!"
+  artist: "whatsthatpicture"
+  sourceUrl: https://www.flickr.com/photos/24469639@N00/52134310961
+  license: "Public Domain Mark"
+  caption: "자전거 옆에 선 자랑스러운 주인, 새로운 발명품의 시대"
+- id: p199
+  imageFile: photos/persistent-snow-field-on-north-face-of-eagle.jpg
+  title: "Persistent snow field on north face of Eagle Peak"
+  artist: "YellowstoneNPS"
+  sourceUrl: https://www.flickr.com/photos/80223459@N05/54779223974
+  license: "Public Domain Mark"
+  caption: "봉우리 북쪽에 남은 잔설, 여름에도 녹지 않는 흰 자국"
+- id: p200
+  imageFile: photos/rain-window.jpg
+  title: "Rain Window"
+  artist: "Steve Johnson"
+  sourceUrl: https://stocksnap.io/photo/rain-window-9WON97E89Q
+  license: "CC0"
+  caption: "빗방울 맺힌 유리창, 흐려진 바깥 풍경"
+- id: p201
+  imageFile: photos/grand-staircase.jpg
+  title: "Grand Staircase"
+  artist: "liquidcrash"
+  sourceUrl: https://www.flickr.com/photos/124320023@N06/13960541319
+  license: "Public Domain Mark"
+  caption: "노을 진 협곡의 대계단, 붉게 물든 층층의 바위"
+- id: p202
+  imageFile: photos/20140918-nrcs-lsc-0350.jpg
+  title: "20140918-NRCS-LSC-0350"
+  artist: "USDAgov"
+  sourceUrl: https://www.flickr.com/photos/41284017@N08/15292104642
+  license: "Public Domain Mark"
+  caption: "농부의 늙은 손, 흙과 함께 늙어 온 시간"
+- id: p203
+  imageFile: photos/thieves-like-us.jpg
+  title: "Thieves Like Us"
+  artist: "sjpowermac"
+  sourceUrl: https://www.flickr.com/photos/41890311@N06/46780026125
+  license: "CC0"
+  caption: "영화 제목을 딴 우산 속 인물, 비 오는 날의 도망자 같은 분위기"
+- id: p204
+  imageFile: photos/christ-without-hands.jpg
+  title: "Christ Without Hands"
+  artist: "jimcintosh"
+  sourceUrl: https://www.flickr.com/photos/8105696@N05/489328822
+  license: "CC0"
+  caption: "손이 없는 그리스도상, 소웨토에서 전해진 상징"
+- id: p205
+  imageFile: photos/abandoned-building.jpg
+  title: "Abandoned Building"
+  artist: "westernhunan"
+  sourceUrl: https://www.flickr.com/photos/99865395@N05/9493976918
+  license: "CC0"
+  caption: "버려진 건물, 창문이 뜯겨 나간 벽면"
+- id: p206
+  imageFile: photos/mountain-fog.jpg
+  title: "Mountain Fog"
+  artist: "World Travel Adventures"
+  sourceUrl: https://stocksnap.io/photo/mountain-fog-7JR7JENX68
+  license: "CC0"
+  caption: "산을 뒤덮은 안개, 형체만 남은 능선"
+- id: p207
+  imageFile: photos/guitars.jpg
+  title: "guitars"
+  artist: "victor.lavrentev"
+  sourceUrl: https://www.flickr.com/photos/23082297@N07/2413472242
+  license: "Public Domain Mark"
+  caption: "나란히 걸린 기타들, 저마다 다른 소리를 기다리는"
+- id: p208
+  imageFile: photos/mirror-mirror-explore.jpg
+  title: "Mirror Mirror (Explore)"
+  artist: "sjpowermac"
+  sourceUrl: https://www.flickr.com/photos/41890311@N06/27580913664
+  license: "CC0"
+  caption: "거울 속의 거울, 끝없이 반복되는 반사"
+- id: p209
+  imageFile: photos/old-books-on-shelf.jpg
+  title: "Old books on shelf"
+  artist: "Wallboat"
+  sourceUrl: https://www.flickr.com/photos/151415985@N06/36772276304
+  license: "CC0"
+  caption: "책장에 꽂힌 오래된 책들, 등이 바랜 표지들"
+- id: p210
+  imageFile: photos/woman-reading-on-train-station.jpg
+  title: "Woman reading on train station"
+  artist: "Kartlyn Earth & ArtKN"
+  sourceUrl: https://www.flickr.com/photos/149685850@N05/25552870157
+  license: "Public Domain Mark"
+  caption: "기차역에서 책 읽는 여인, 기다림을 견디는 방법"
+- id: p211
+  imageFile: photos/bivalve-new-jersey-barber-shop.jpg
+  title: "Bivalve, New Jersey. Barber shop"
+  artist: "rothstein, arthur"
+  sourceUrl: http://www.loc.gov/item/2017723935/
+  license: "Public Domain (U.S. Government work)"
+  caption: "작은 마을 바이벌브의 이발소, 조개잡이 마을의 하루"
+- id: p212
+  imageFile: photos/harvesting-sugarcane-in-cuba.jpg
+  title: "Harvesting sugarcane in Cuba"
+  artist: "FSA/OWI"
+  sourceUrl: http://www.loc.gov/item/2017824700/
+  license: "Public Domain (U.S. Government work)"
+  caption: "쿠바의 사탕수수 수확, 땀에 젖은 낫질"

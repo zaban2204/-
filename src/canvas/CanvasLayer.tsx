@@ -3,6 +3,9 @@ import type { PointerEvent as ReactPointerEvent } from 'react';
 import { useAppStore } from '../store';
 import { Toolbar } from './Toolbar';
 import { MemoItem } from './MemoItem';
+import { CardNodeText } from './CardNodeText';
+import { ImageZoom } from './ImageZoom';
+import { memoStylePreset } from './memoStyles';
 import { closedSmoothPath, pouchHull, rectsIntersect } from './geometry';
 import type { Rect } from './geometry';
 import { exportCanvasPng } from './export';
@@ -22,9 +25,10 @@ function safelySetPointerCapture(el: Element, pointerId: number) {
 }
 
 const NODE_WIDTH = 190;
+// 카드(조각)의 실제 너비 — canvas.module.css의 .node와 짝을 이룬다
+const CARD_WIDTH = NODE_WIDTH;
+const CARD_GRAB_OFFSET_Y = 20;
 const POUCH_PADDING = 24;
-const MEMO_DEFAULT_WIDTH = 200;
-const MEMO_DEFAULT_HEIGHT = 28;
 const DRAG_THRESHOLD_PX = 4;
 
 type DragState =
@@ -54,8 +58,12 @@ export const CanvasLayer = forwardRef<HTMLDivElement>(function CanvasLayer(_prop
   const togglePendingPouchNode = useAppStore((s) => s.togglePendingPouchNode);
   const commitPouch = useAppStore((s) => s.commitPouch);
   const updatePouchLabel = useAppStore((s) => s.updatePouchLabel);
+  const createIdeaCard = useAppStore((s) => s.createIdeaCard);
   const addMemo = useAppStore((s) => s.addMemo);
   const moveMemoBy = useAppStore((s) => s.moveMemoBy);
+  const memoTextStyle = useAppStore((s) => s.memoTextStyle);
+  const updateMemoTextStyle = useAppStore((s) => s.updateMemoTextStyle);
+  const openImageZoom = useAppStore((s) => s.openImageZoom);
   const setSelection = useAppStore((s) => s.setSelection);
   const clearSelection = useAppStore((s) => s.clearSelection);
   const deleteSelection = useAppStore((s) => s.deleteSelection);
@@ -69,6 +77,7 @@ export const CanvasLayer = forwardRef<HTMLDivElement>(function CanvasLayer(_prop
   const [hoveredThreadId, setHoveredThreadId] = useState<string | null>(null);
   const [editingMemoId, setEditingMemoId] = useState<string | null>(null);
   const [editingPouchId, setEditingPouchId] = useState<string | null>(null);
+  const [editingCardNodeId, setEditingCardNodeId] = useState<string | null>(null);
 
   const setPaneRef = useCallback(
     (el: HTMLDivElement | null) => {
@@ -124,6 +133,13 @@ export const CanvasLayer = forwardRef<HTMLDivElement>(function CanvasLayer(_prop
     window.addEventListener('keydown', onKeyDown);
     return () => window.removeEventListener('keydown', onKeyDown);
   }, [undo, deleteSelection, commitPouch]);
+
+  // 쓰는 중에 툴바에서 크기를 바꾸면 그 메모에 곧바로 반영한다
+  useEffect(() => {
+    if (!editingMemoId) return;
+    const preset = memoStylePreset(memoTextStyle);
+    updateMemoTextStyle(editingMemoId, preset.kind, preset.width);
+  }, [memoTextStyle, editingMemoId, updateMemoTextStyle]);
 
   // ---- 노드 ----
   function handleNodePointerDown(event: ReactPointerEvent<HTMLDivElement>, nodeId: string) {
@@ -214,6 +230,23 @@ export const CanvasLayer = forwardRef<HTMLDivElement>(function CanvasLayer(_prop
     if (!paneRect) return;
     const tool = useAppStore.getState().activeTool;
 
+    if (tool === 'card') {
+      // 연필과 같은 이유로 기본 동작을 막는다 — 그대로 두면 뒤따르는 mousedown이
+      // 방금 띄운 입력창의 포커스를 빼앗고, 빈 카드라 곧바로 지워진다.
+      event.preventDefault();
+      const stamp = Date.now();
+      const nodeId = `card-node-${stamp}`;
+      createIdeaCard({
+        fragmentId: `personal-${stamp}`,
+        nodeId,
+        // 누른 지점이 카드의 중심이 되도록 살짝 당긴다
+        x: event.clientX - paneRect.left - CARD_WIDTH / 2,
+        y: event.clientY - paneRect.top - CARD_GRAB_OFFSET_Y,
+      });
+      setEditingCardNodeId(nodeId);
+      return;
+    }
+
     if (tool === 'pencil') {
       // pointerdown의 기본 동작을 막아 뒤따르는 mousedown이 발생하지 않게 한다.
       // 그대로 두면 mousedown이 "클릭한 요소로 포커스 이동"을 수행하면서 방금 띄운
@@ -221,13 +254,16 @@ export const CanvasLayer = forwardRef<HTMLDivElement>(function CanvasLayer(_prop
       // "클릭했는데 아무 일도 안 일어남"으로 보인다.
       event.preventDefault();
       const memoId = `memo-${Date.now()}`;
+      // 툴바에서 고른 크기 단계로 시작한다
+      const preset = memoStylePreset(useAppStore.getState().memoTextStyle);
       addMemo({
         id: memoId,
         x: event.clientX - paneRect.left,
         y: event.clientY - paneRect.top,
         text: '',
-        width: MEMO_DEFAULT_WIDTH,
-        height: MEMO_DEFAULT_HEIGHT,
+        width: preset.width,
+        height: preset.height,
+        textStyle: preset.kind,
       });
       setEditingMemoId(memoId);
       return;
@@ -498,9 +534,20 @@ export const CanvasLayer = forwardRef<HTMLDivElement>(function CanvasLayer(_prop
             onPointerDown={(event) => handleNodePointerDown(event, node.id)}
             onPointerMove={handlePointerMove}
             onPointerUp={handlePointerUp}
+            // 더블클릭: 이미지는 크게 보고, 직접 쓴 조각은 다시 고친다
+            // (풀에서 낚아 온 문장은 원문 그대로 둔다)
+            onDoubleClick={() => {
+              if (fragment.kind === 'image') openImageZoom(fragment.id);
+              else if (fragment.origin === 'personal') setEditingCardNodeId(node.id);
+            }}
           >
             {fragment.kind === 'sentence' ? (
-              <p className={styles.nodeText}>{fragment.text}</p>
+              <CardNodeText
+                fragment={fragment}
+                nodeId={node.id}
+                isEditing={editingCardNodeId === node.id}
+                onFinishEditing={() => setEditingCardNodeId(null)}
+              />
             ) : (
               <img className={styles.nodeImage} src={fragment.imageUrl} alt="" draggable={false} />
             )}
@@ -521,6 +568,8 @@ export const CanvasLayer = forwardRef<HTMLDivElement>(function CanvasLayer(_prop
           onPointerUp={handlePointerUp}
         />
       ))}
+
+      <ImageZoom />
 
       {boxRect && (
         <div

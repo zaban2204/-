@@ -36,6 +36,60 @@ describe('poolSlice', () => {
   });
 });
 
+// ---- poolSlice: 직접 만든 조각 (카드 도구) ----
+describe('poolSlice: 직접 만든 조각', () => {
+  const personal = (id: string, text = '내가 쓴 생각'): Fragment => ({
+    id,
+    kind: 'sentence',
+    text,
+    origin: 'personal',
+    neighborIds: [],
+  });
+
+  it('addPersonalFragment: 풀에 들어가고 origin이 personal로 강제된다', () => {
+    useAppStore.getState().loadPool(makeFragments(2));
+    // origin을 base로 잘못 넘겨도 personal로 교정돼야 한다
+    useAppStore.getState().addPersonalFragment({ ...personal('p0'), origin: 'base' });
+    const { fragments } = useAppStore.getState();
+    expect(fragments.size).toBe(3);
+    expect(fragments.get('p0')?.origin).toBe('personal');
+  });
+
+  it('addPersonalFragment: 소진 처리되어 수면으로 다시 떠오르지 않는다', () => {
+    useAppStore.getState().addPersonalFragment(personal('p0'));
+    expect(useAppStore.getState().exhaustedIds.has('p0')).toBe(true);
+  });
+
+  it('updateFragmentText: 텍스트만 바뀌고 나머지 필드는 유지된다', () => {
+    useAppStore.getState().addPersonalFragment(personal('p0', '처음 쓴 말'));
+    useAppStore.getState().updateFragmentText('p0', '고쳐 쓴 말');
+    const f = useAppStore.getState().fragments.get('p0');
+    expect(f?.text).toBe('고쳐 쓴 말');
+    expect(f).toMatchObject({ id: 'p0', kind: 'sentence', origin: 'personal' });
+  });
+
+  it('updateFragmentText: 없는 id면 아무것도 바뀌지 않는다', () => {
+    useAppStore.getState().loadPool(makeFragments(2));
+    const before = useAppStore.getState().fragments;
+    useAppStore.getState().updateFragmentText('없는-조각', '무시되어야 한다');
+    expect(useAppStore.getState().fragments).toBe(before);
+  });
+
+  it('removePersonalFragment: 직접 만든 조각은 풀·소진 집합에서 함께 사라진다', () => {
+    useAppStore.getState().addPersonalFragment(personal('p0'));
+    useAppStore.getState().removePersonalFragment('p0');
+    const s = useAppStore.getState();
+    expect(s.fragments.has('p0')).toBe(false);
+    expect(s.exhaustedIds.has('p0')).toBe(false);
+  });
+
+  it('removePersonalFragment: base 조각은 지우지 않는다 (빌드타임 풀 보호)', () => {
+    useAppStore.getState().loadPool(makeFragments(2));
+    useAppStore.getState().removePersonalFragment('f0');
+    expect(useAppStore.getState().fragments.has('f0')).toBe(true);
+  });
+});
+
 // ---- surfaceSlice ----
 describe('surfaceSlice', () => {
   const sf = (fragmentId: string) => ({
@@ -124,6 +178,79 @@ describe('canvasSlice: 노드', () => {
     const nodes = useAppStore.getState().nodes;
     expect(nodes.find((n) => n.id === 'n0')).toMatchObject({ x: 113.7, y: 95.8 });
     expect(nodes.find((n) => n.id === 'n1')).toMatchObject({ x: 200, y: 200 });
+  });
+});
+
+// ---- canvasSlice: 카드 도구 (아이디어 조각 직접 만들기) ----
+describe('canvasSlice: 카드 도구', () => {
+  const card = (n: number, x = 0, y = 0) => ({
+    fragmentId: `personal-${n}`,
+    nodeId: `card-node-${n}`,
+    x,
+    y,
+  });
+
+  it('createIdeaCard: 빈 personal 조각과 그 조각을 담은 노드가 함께 생긴다', () => {
+    useAppStore.getState().createIdeaCard(card(0, 120, 80));
+    const s = useAppStore.getState();
+    const fragment = s.fragments.get('personal-0');
+    expect(fragment).toMatchObject({
+      id: 'personal-0',
+      kind: 'sentence',
+      text: '',
+      origin: 'personal',
+      neighborIds: [],
+    });
+    expect(s.nodes).toHaveLength(1);
+    expect(s.nodes[0]).toMatchObject({
+      id: 'card-node-0',
+      fragmentId: 'personal-0',
+      x: 120,
+      y: 80,
+    });
+  });
+
+  it('createIdeaCard: 만든 조각은 소진 처리되어 수면으로 떠오르지 않는다', () => {
+    useAppStore.getState().createIdeaCard(card(0));
+    expect(useAppStore.getState().exhaustedIds.has('personal-0')).toBe(true);
+  });
+
+  it('createIdeaCard: z가 기존 노드 위로 올라간다', () => {
+    const s = useAppStore.getState();
+    s.addNode({ id: 'n0', fragmentId: 'f0', x: 0, y: 0, z: 0 });
+    s.createIdeaCard(card(0));
+    const nodes = useAppStore.getState().nodes;
+    expect(nodes[1].z).toBeGreaterThan(nodes[0].z);
+  });
+
+  it('createIdeaCard: 스냅샷을 한 번만 쌓아 Ctrl+Z 한 번에 카드가 사라진다', () => {
+    const s = useAppStore.getState();
+    s.createIdeaCard(card(0));
+    expect(useAppStore.getState().undoStack).toHaveLength(1);
+    useAppStore.getState().undo();
+    expect(useAppStore.getState().nodes).toHaveLength(0);
+  });
+
+  it('카드에 글을 쓰고 지우기: 노드와 조각이 함께 정리된다', () => {
+    const s = useAppStore.getState();
+    s.createIdeaCard(card(0));
+    s.updateFragmentText('personal-0', '이 문장으로 시작하자');
+    expect(useAppStore.getState().fragments.get('personal-0')?.text).toBe('이 문장으로 시작하자');
+
+    // 빈 카드로 확정했을 때 CardNodeText가 하는 정리와 같은 순서
+    useAppStore.getState().removeNodes(['card-node-0']);
+    useAppStore.getState().removePersonalFragment('personal-0');
+    const after = useAppStore.getState();
+    expect(after.nodes).toHaveLength(0);
+    expect(after.fragments.has('personal-0')).toBe(false);
+  });
+
+  it('카드는 실타래·주머니로 낚아 온 조각과 똑같이 이어진다', () => {
+    const s = useAppStore.getState();
+    s.createIdeaCard(card(0));
+    s.createIdeaCard(card(1));
+    s.addThreadBetween('card-node-0', 'card-node-1');
+    expect(useAppStore.getState().threads).toHaveLength(1);
   });
 });
 
@@ -252,6 +379,75 @@ describe('canvasSlice: 메모', () => {
     s.removeMemos(['m0']);
     expect(useAppStore.getState().memos.map((m) => m.id)).toEqual(['m1']);
   });
+
+  it('setMemoTextStyle: 다음에 쓸 메모의 크기 단계가 바뀐다', () => {
+    useAppStore.getState().setMemoTextStyle('title');
+    expect(useAppStore.getState().memoTextStyle).toBe('title');
+  });
+
+  it('updateMemoTextStyle: 크기 단계와 너비가 함께 바뀌고 위치·글은 유지된다', () => {
+    const s = useAppStore.getState();
+    s.addMemo({ ...memo('m0', 10, 20), text: '제목이 될 말' });
+    s.updateMemoTextStyle('m0', 'title', 320);
+    const m = useAppStore.getState().memos[0];
+    expect(m.textStyle).toBe('title');
+    expect(m.width).toBe(320);
+    expect(m).toMatchObject({ x: 10, y: 20, text: '제목이 될 말' });
+  });
+
+  it('updateMemoTextStyle: 같은 단계로 다시 바꾸면 스냅샷을 쌓지 않는다', () => {
+    const s = useAppStore.getState();
+    s.addMemo({ ...memo('m0'), textStyle: 'subtitle' });
+    const depth = useAppStore.getState().undoStack.length;
+    s.updateMemoTextStyle('m0', 'subtitle', 260);
+    expect(useAppStore.getState().undoStack).toHaveLength(depth);
+  });
+});
+
+// ---- canvasSlice: 이미지 크게 보기 ----
+describe('canvasSlice: 이미지 크게 보기', () => {
+  const imageFragment: Fragment = {
+    id: 'p01',
+    kind: 'image',
+    imageUrl: '/images/paintings/starry-night.jpg',
+    caption: '소용돌이치는 밤하늘',
+    origin: 'base',
+    neighborIds: [],
+  };
+
+  beforeEach(() => {
+    useAppStore.getState().loadPool([...makeFragments(2), imageFragment]);
+  });
+
+  it('openImageZoom: 이미지 조각을 크게 보기로 연다', () => {
+    useAppStore.getState().openImageZoom('p01');
+    expect(useAppStore.getState().zoomedFragmentId).toBe('p01');
+  });
+
+  it('openImageZoom: 문장 조각은 열지 않는다 (이미 다 읽히는 조각이다)', () => {
+    useAppStore.getState().openImageZoom('f0');
+    expect(useAppStore.getState().zoomedFragmentId).toBeNull();
+  });
+
+  it('openImageZoom: 없는 id면 아무 일도 없다', () => {
+    useAppStore.getState().openImageZoom('없는-조각');
+    expect(useAppStore.getState().zoomedFragmentId).toBeNull();
+  });
+
+  it('closeImageZoom: 닫으면 비워진다', () => {
+    const s = useAppStore.getState();
+    s.openImageZoom('p01');
+    s.closeImageZoom();
+    expect(useAppStore.getState().zoomedFragmentId).toBeNull();
+  });
+
+  it('크게 보기는 되돌리기 스냅샷을 쌓지 않는다 (편집이 아니라 보기다)', () => {
+    const depth = useAppStore.getState().undoStack.length;
+    const s = useAppStore.getState();
+    s.openImageZoom('p01');
+    s.closeImageZoom();
+    expect(useAppStore.getState().undoStack).toHaveLength(depth);
+  });
 });
 
 // ---- canvasSlice: 도구·선택 ----
@@ -268,6 +464,16 @@ describe('canvasSlice: 도구 전환과 선택', () => {
     const after = useAppStore.getState();
     expect(after.pendingPouchNodeIds).toHaveLength(0);
     expect(after.pendingThreadFromNodeId).toBeNull();
+  });
+
+  it('setActiveTool: 카드 도구로 바꿔도 진행 중이던 조작이 취소된다', () => {
+    const s = useAppStore.getState();
+    s.setActiveTool('pouch');
+    s.togglePendingPouchNode('n0');
+    s.setActiveTool('card');
+    const after = useAppStore.getState();
+    expect(after.activeTool).toBe('card');
+    expect(after.pendingPouchNodeIds).toHaveLength(0);
   });
 
   it('setSelection: 지정한 종류만 갱신하고 나머지는 그대로 둔다', () => {

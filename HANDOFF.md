@@ -8,7 +8,7 @@
 
 "낚시터"는 창작자(주로 글쓰기)를 위한 웹 도구다. 핵심 아이디어: 완벽한 첫 문장을 써야 한다는 강박 때문에 백지 앞에서 막히는 사람들에게, **우연히 떠다니는 아이디어 조각(문장·명화)을 낚아서 캔버스 위에 느슨하게 배치·연결**하게 함으로써 착수를 돕는다.
 
-- 화면 왼쪽: **캔버스** — 낚아온 조각을 자유 배치, 실타래(연결선)·주머니(묶음)·연필(메모)로 편집
+- 화면 왼쪽: **캔버스** — 낚아온 조각을 자유 배치, 실타래(연결선)·주머니(묶음)·연필(메모)·카드(직접 쓴 조각)로 편집
 - 화면 오른쪽: **수면** — 문장/명화 조각 10~14개가 항상 천천히 흘러다님. 클릭하면 가라앉고 관련 조각 4개가 떠오름. 드래그해서 캔버스로 옮기면 "낚기" 성공
 - **완전 정적 배포, 백엔드 없음.** 모든 조각·연관관계는 빌드타임에 미리 계산되어 정적 JSON으로 서빙됨
 - 반드시 참고할 두 문서(저장소 밖, 대화 맥락에만 있었을 수 있음 — 없다면 아래 요약이 곧 스펙이다):
@@ -29,14 +29,27 @@
 | 1 | 콘텐츠 파이프라인(sentences/paintings → 임베딩 → pool.json) | ✅ 완료 |
 | 2 | 수면: 부유·순환·충돌·튕김 물리 | ✅ 완료 |
 | 3 | 인터랙션: 클릭(가라앉기+부상), 드래그(낚기) | ✅ 완료 |
-| 4 | 캔버스 편집: 실타래·주머니·연필, undo, 선택 | ✅ 완료 |
+| 4 | 캔버스 편집: 실타래·주머니·연필·카드, undo, 선택 | ✅ 완료 |
 | 5 | 내 이야기 던지기 (txt 업로드 → 개인 조각화) | ❌ **미착수** — 사용자가 토큰 비용 이유로 보류 요청. 진행하려면 사용자에게 먼저 확인할 것 |
 | 6 | 내보내기 (PNG만 — 마크다운 내보내기는 사용자 요청으로 제거함) | ✅ 완료 (PNG만) |
 | 7 | 첫인상·마감(온보딩 연출, 접근성, 성능 최적화) | ❌ **미착수** |
 
-**실제 명화 이미지**: Phase 1에서는 placeholder였으나, 이후 Wikimedia Commons에서 12점 전부 실제 이미지(사용자 승인 받아 다운로드)로 교체 완료. `public/images/paintings/*.jpg`에 저장되어 있고 `content/paintings.yaml`이 이를 가리킨다.
+**실제 명화 이미지**: Phase 1에서는 placeholder였으나, 이후 Wikimedia Commons에서 12점 전부 실제 이미지(사용자 승인 받아 다운로드)로 교체 완료. `public/images/paintings/*.jpg`에 저장되어 있고 `content/paintings.yaml`이 이를 가리킨다. **2026-07-31에 공개 API에서 100점을 무작위 보충해 현재 명화 112점 · 문장 45개 · 총 조각 157개**(아래 "명화 조각 보충" 참고).
 
-**단위 테스트**: Vitest로 58개 작성됨 (geometry.ts 17개, store.ts 33개, build-pool.ts 8개). `npm test`로 실행. 자세한 내용은 저장소 루트의 `테스트결과.md` 참고.
+**단위 테스트**: Vitest로 74개 작성됨 (geometry.ts 17개, store.ts 49개, build-pool.ts 8개). `npm test`로 실행. 자세한 내용은 저장소 루트의 `테스트결과.md` 참고.
+
+### Phase 4 이후 추가된 것 (2026-07-31)
+
+| 기능 | 내용 | 관련 파일 |
+|---|---|---|
+| 메모 글자 크기 | 연필 아이콘을 누르면 툴바에 **제목·소제목·본문** 선택기가 나오고, 고른 크기로 메모를 쓴다. 쓰는 중에 크기를 바꿔도 즉시 반영된다. | `memoStyles.ts`, `Toolbar.tsx`, `MemoItem.tsx`, `store.ts`(`memoTextStyle`, `updateMemoTextStyle`) |
+| 글꼴 통일 | 앱 전체를 Noto Sans(KR)로 통일. `index.css` `:root`에서만 지정하고 나머지 개별 `font-family`는 제거. **단 `textarea`는 부모 글꼴을 자동 상속하지 않으므로 `font-family: inherit`을 반드시 명시해야 한다** (안 하면 한글 Windows에서 굴림으로 되돌아간다). | `index.html`, `src/index.css`, 각 `*.module.css` |
+| 이미지 크게 보기 | 캔버스 위 **이미지 조각을 더블클릭하면 화면 전체를 덮는 창에 크게 열린다.** 배경 클릭·Escape·닫기 버튼으로 닫는다. 문장 조각은 열리지 않는다. `data-export-hide`가 붙어 PNG 내보내기에는 찍히지 않는다. `position: fixed`로 뷰포트를 덮으므로 **`.pane`에 `transform`을 추가하면 이 창이 pane 안에 갇힌다 — 주의.** | `ImageZoom.tsx`, `store.ts`(`zoomedFragmentId`, `openImageZoom`, `closeImageZoom`) |
+| 카드 도구 (`▤`) | 수면 위 조각과 **같은 모양의 아이디어 카드를 캔버스에서 직접 만든다.** 아이콘 누르고 빈 곳을 클릭 → 입력창이 열리고, Ctrl+Enter/Escape로 확정. 빈 채로 확정하면 조각과 노드가 함께 정리된다. 직접 쓴 카드는 더블클릭으로 다시 고칠 수 있고, 낚아 온 조각은 원문 보호를 위해 고칠 수 없다. | `CardNodeText.tsx`, `CanvasLayer.tsx`, `store.ts`(`createIdeaCard`, `addPersonalFragment`, `updateFragmentText`, `removePersonalFragment`) |
+
+**카드 도구의 설계 원칙 (이어서 작업할 때 지킬 것)**: 카드를 위한 새 타입을 만들지 않았다. 카드 = `origin: 'personal'` **조각 + 그 조각을 담은 노드** 한 쌍이다. 그래서 실타래·주머니·박스 선택·드래그·Delete·되돌리기·PNG 내보내기가 낚아 온 조각과 **완전히 같은 코드 경로**를 탄다. Phase 5(txt 업로드 → 개인 조각화)도 같은 `addPersonalFragment` 경로를 재사용하면 된다.
+
+**알려진 문제 (미해결)**: 글꼴을 Google Fonts CDN에서 불러오기 때문에, PNG 내보내기 시 `html-to-image`가 교차 출처 스타일시트를 읽지 못해 `SecurityError`를 콘솔에 남기고 **내보낸 이미지의 글꼴이 화면과 달라진다.** 또 PRD의 "네트워크 없이도 동작" 기준이 글꼴에 대해 깨진다. 해결책은 Noto Sans woff2를 `public/fonts/`에 담아 같은 출처로 서빙하는 것(저장소에 1~3MB 추가). 사용자 판단 대기 중.
 
 **배포**: GitHub(`https://github.com/zaban2204/-.git`) → Vercel 연동, `main` push 시 자동 배포 중. DB 없음, 서버 없음.
 
@@ -71,9 +84,12 @@ fishing-pond/
 │   │   ├── SurfaceCard.tsx        # 개별 포스트잇 카드 (memo)
 │   │   └── surface.module.css
 │   └── canvas/
-│       ├── CanvasLayer.tsx        # 캔버스 편집 전체 (선택/실타래/주머니/메모/내보내기)
-│       ├── Toolbar.tsx            # 도구 4개 버튼
+│       ├── CanvasLayer.tsx        # 캔버스 편집 전체 (선택/실타래/주머니/메모/카드/내보내기)
+│       ├── Toolbar.tsx            # 도구 5개 버튼 + 연필 크기 선택기
 │       ├── MemoItem.tsx           # 연필 메모 컴포넌트
+│       ├── memoStyles.ts          # 메모 크기 3단계 프리셋 (제목/소제목/본문) — 단일 출처
+│       ├── CardNodeText.tsx       # 카드 도구로 만든 조각의 본문 표시·편집
+│       ├── useDeferredFocus.ts    # 새로 띄운 입력창에 안전하게 포커스 주는 훅 (메모·카드 공용)
 │       ├── geometry.ts            # convex hull, Catmull-Rom 스무딩 등 순수 기하 함수
 │       ├── geometry.test.ts
 │       ├── export.ts              # PNG 내보내기 (html-to-image)

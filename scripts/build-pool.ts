@@ -82,7 +82,11 @@ function buildFragments(): { fragments: Fragment[]; embedText: string[] } {
     fragments.push({
       id: p.id,
       kind: 'image',
-      imageUrl: `/images/paintings/${p.imageFile}`,
+      // imageFile에 '/'가 있으면 images/ 아래의 경로로 그대로 쓴다 (예: photos/rain.jpg).
+      // 없으면 지금까지처럼 명화 폴더를 가리킨다 (기존 12점 + 미술관 100점).
+      imageUrl: p.imageFile.includes('/')
+        ? `/images/${p.imageFile}`
+        : `/images/paintings/${p.imageFile}`,
       caption: p.caption,
       origin: 'base',
       neighborIds: [],

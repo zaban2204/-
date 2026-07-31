@@ -6,6 +6,7 @@ import type {
   Thread,
   Pouch,
   Memo,
+  MemoTextStyle,
   ToolKind,
 } from './types';
 
@@ -16,6 +17,12 @@ export interface PoolSlice {
 
   loadPool: (fragments: Fragment[]) => void; // TODO: pool.json 로드 후 채우기
   markExhausted: (fragmentId: string) => void; // TODO: 캔버스에 올라간 조각 소진 처리
+
+  // 사용자가 캔버스에서 직접 만든 조각. 빌드타임 풀(base)과 같은 Map에 들어가
+  // 이후 렌더·내보내기 경로를 그대로 탄다.
+  addPersonalFragment: (fragment: Fragment) => void;
+  updateFragmentText: (fragmentId: string, text: string) => void;
+  removePersonalFragment: (fragmentId: string) => void;
 }
 
 // ---- surfaceSlice: 수면 위 조각과 재생 상태 ----
@@ -60,6 +67,8 @@ export interface CanvasSlice {
   pouches: Pouch[];
   memos: Memo[];
   activeTool: ToolKind;
+  // 연필 도구로 다음에 쓸 메모의 글자 크기. 도구 상태이므로 되돌리기 스냅샷에는 넣지 않는다.
+  memoTextStyle: MemoTextStyle;
 
   // 선택 상태
   selectedNodeIds: string[];
@@ -71,9 +80,15 @@ export interface CanvasSlice {
   pendingThreadFromNodeId: string | null;
   pendingPouchNodeIds: string[];
 
+  // 크게 보기 중인 이미지 조각. 캔버스 편집 상태가 아니라 보기 상태라서
+  // 되돌리기 스냅샷에는 들어가지 않는다.
+  zoomedFragmentId: string | null;
+
   undoStack: CanvasSnapshot[];
 
   addNode: (node: CanvasNode) => void;
+  // 카드 도구: 조각과 그 조각을 담은 노드를 한 번에 만든다 (되돌리기도 한 번에)
+  createIdeaCard: (args: { fragmentId: string; nodeId: string; x: number; y: number }) => void;
   removeNodes: (nodeIds: string[]) => void;
   moveNodesBy: (nodeIds: string[], dx: number, dy: number) => void;
 
@@ -88,6 +103,12 @@ export interface CanvasSlice {
   updateMemo: (memoId: string, text: string) => void;
   moveMemoBy: (memoId: string, dx: number, dy: number) => void;
   removeMemos: (memoIds: string[]) => void;
+  setMemoTextStyle: (style: MemoTextStyle) => void;
+  updateMemoTextStyle: (memoId: string, style: MemoTextStyle, width: number) => void;
+
+  // 이미지 조각만 크게 볼 수 있다 (문장 조각은 이미 다 읽힌다)
+  openImageZoom: (fragmentId: string) => void;
+  closeImageZoom: () => void;
 
   setActiveTool: (tool: ToolKind) => void;
   setPendingThreadFrom: (nodeId: string | null) => void;
@@ -129,6 +150,37 @@ export const useAppStore = create<AppStore>()((set) => ({
       return { exhaustedIds: next };
     }),
 
+  addPersonalFragment: (fragment) =>
+    set((state) => {
+      const next = new Map(state.fragments);
+      next.set(fragment.id, { ...fragment, origin: 'personal' });
+      // 직접 만든 조각은 수면으로 다시 떠오르지 않는다 (캔버스에 이미 놓여 있다)
+      const exhausted = new Set(state.exhaustedIds);
+      exhausted.add(fragment.id);
+      return { fragments: next, exhaustedIds: exhausted };
+    }),
+
+  updateFragmentText: (fragmentId, text) =>
+    set((state) => {
+      const target = state.fragments.get(fragmentId);
+      if (!target) return state;
+      const next = new Map(state.fragments);
+      next.set(fragmentId, { ...target, text });
+      return { fragments: next };
+    }),
+
+  // base 조각은 빌드타임 풀의 자산이므로 지우지 않는다. 사용자가 만든 것만 거둔다.
+  removePersonalFragment: (fragmentId) =>
+    set((state) => {
+      const target = state.fragments.get(fragmentId);
+      if (!target || target.origin !== 'personal') return state;
+      const next = new Map(state.fragments);
+      next.delete(fragmentId);
+      const exhausted = new Set(state.exhaustedIds);
+      exhausted.delete(fragmentId);
+      return { fragments: next, exhaustedIds: exhausted };
+    }),
+
   // surfaceSlice
   surfaceFragments: [],
   isPaused: false,
@@ -157,12 +209,14 @@ export const useAppStore = create<AppStore>()((set) => ({
   pouches: [],
   memos: [],
   activeTool: 'select',
+  memoTextStyle: 'body',
   selectedNodeIds: [],
   selectedThreadIds: [],
   selectedPouchIds: [],
   selectedMemoIds: [],
   pendingThreadFromNodeId: null,
   pendingPouchNodeIds: [],
+  zoomedFragmentId: null,
   undoStack: [],
 
   pushUndoSnapshot: () =>
@@ -201,6 +255,29 @@ export const useAppStore = create<AppStore>()((set) => ({
       // z는 항상 마지막에 올린 노드가 위로 오도록 단조 증가시킨다
       nodes: [...state.nodes, { ...node, z: state.nodes.length }],
     })),
+
+  // 카드 도구로 만드는 새 조각. 수면에서 낚아 올린 조각과 똑같은 모양·경로를
+  // 쓰도록, 별도 타입을 만들지 않고 personal 조각 + 노드 한 쌍으로 둔다.
+  createIdeaCard: ({ fragmentId, nodeId, x, y }) =>
+    set((state) => {
+      const fragments = new Map(state.fragments);
+      fragments.set(fragmentId, {
+        id: fragmentId,
+        kind: 'sentence',
+        text: '',
+        origin: 'personal',
+        // 이웃은 빌드타임 임베딩에서 나온다. 직접 쓴 조각엔 아직 없다.
+        neighborIds: [],
+      });
+      const exhaustedIds = new Set(state.exhaustedIds);
+      exhaustedIds.add(fragmentId);
+      return {
+        undoStack: pushSnapshot(state),
+        fragments,
+        exhaustedIds,
+        nodes: [...state.nodes, { id: nodeId, fragmentId, x, y, z: state.nodes.length }],
+      };
+    }),
 
   // 노드를 지우면 그 노드에 걸린 실타래와 주머니 멤버십도 함께 정리한다.
   // 멤버가 1개 이하로 줄어든 주머니는 묶음으로서 의미가 없으므로 스스로 사라진다.
@@ -334,6 +411,30 @@ export const useAppStore = create<AppStore>()((set) => ({
         undoStack: pushSnapshot(state),
         memos: state.memos.filter((m) => !doomed.has(m.id)),
         selectedMemoIds: state.selectedMemoIds.filter((id) => !doomed.has(id)),
+      };
+    }),
+
+  openImageZoom: (fragmentId) =>
+    set((state) => {
+      const fragment = state.fragments.get(fragmentId);
+      // 없는 조각·문장 조각이면 아무 일도 일어나지 않는다
+      if (!fragment || fragment.kind !== 'image') return state;
+      return { zoomedFragmentId: fragmentId };
+    }),
+
+  closeImageZoom: () => set({ zoomedFragmentId: null }),
+
+  setMemoTextStyle: (style) => set({ memoTextStyle: style }),
+
+  // 이미 놓인 메모의 크기 단계를 바꾼다. 너비도 단계에 맞춰 함께 손봐야
+  // 제목이 좁은 상자 안에서 억지로 줄바꿈되지 않는다.
+  updateMemoTextStyle: (memoId, style, width) =>
+    set((state) => {
+      const target = state.memos.find((m) => m.id === memoId);
+      if (!target || (target.textStyle ?? 'body') === style) return state;
+      return {
+        undoStack: pushSnapshot(state),
+        memos: state.memos.map((m) => (m.id === memoId ? { ...m, textStyle: style, width } : m)),
       };
     }),
 

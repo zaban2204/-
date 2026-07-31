@@ -52,6 +52,10 @@ export interface Pouch {
   label?: string;
 }
 
+// 메모 글자 크기. 자유로운 pt 값 대신 세 단계로 묶어 둔다 — 캔버스 위에서
+// 무엇이 제목이고 무엇이 곁가지인지가 크기만으로 읽히면 그걸로 충분하다.
+export type MemoTextStyle = 'title' | 'subtitle' | 'body';
+
 export interface Memo {
   id: string;
   x: number;
@@ -59,6 +63,8 @@ export interface Memo {
   text: string;
   width: number;
   height: number;
+  // 없으면 '본문'으로 본다 (이 필드가 없던 시절의 메모 호환)
+  textStyle?: MemoTextStyle;
 }
 
-export type ToolKind = 'select' | 'thread' | 'pouch' | 'pencil';
+export type ToolKind = 'select' | 'thread' | 'pouch' | 'pencil' | 'card';
